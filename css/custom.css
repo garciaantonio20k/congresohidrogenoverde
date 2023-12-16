@@ -220,7 +220,7 @@ HERO
     margin: 0;
     gap: 15px;
     flex-direction: row;
-    background: url("../images/banner-top-mobile.jpg") no-repeat center center;
+    background: url("https://garciaantonio20k.github.io/congresohidrogenoverde/images/banner-top-mobile.jpg") no-repeat center center;
     background-size: cover;
     padding: 10rem 15px 1rem 15px;
     border-radius: 35px;
@@ -1198,13 +1198,13 @@ HOTELES
     margin: 0 auto 6px;
 }
 
-.slick-hoteles img {
+.seccion-hoteles img {
     border-radius: 30px;
     width: 100%;
     border-radius: 30px;
 }
 
-.slick-hoteles .panel-hotel {
+.seccion-hoteles .panel-hotel {
     background: white;
     padding: 15px;
     border-radius: 20px;
@@ -1221,46 +1221,47 @@ HOTELES
     margin-bottom: .3rem;
 }
 
-.slick-hoteles .slick-hoteles .co-panel--ubicacion {
+.seccion-hoteles .co-panel--ubicacion {
     display: flex;
     align-items: flex-end;
     gap: 20px;
 }
 
 
-.slick-hoteles .ubicacion-estrellas img {
+.seccion-hoteles .ubicacion-estrellas img {
     width: 100%;
     max-height: 28px;
 }
 
-.slick-hoteles h3 {
+.seccion-hoteles h3 {
     font-size: 20px;
     font-family: 'Lexend', sans-serif;
     color: #0040A7;
     margin-bottom: 20px;
 }
 
-.slick-hoteles .ubicacion-estrellas {
+.seccion-hoteles .ubicacion-estrellas {
     overflow: hidden;
     display: inline-block;
     margin: 10px 0;
     margin-bottom: 20px;
 }
 
-.slick-hoteles .ubicacion-estrellas img {
+.seccion-hoteles .ubicacion-estrellas img {
     width: 100%;
 }
 
-.slick-hoteles .slick-slide {
+.seccion-hoteles .slick-slide {
     padding: 0 5px 40px 15px;
 }
 
-.slick-hoteles .ubicacion-texto p.titulo {
+.seccion-hoteles .ubicacion-texto p.titulo {
     color: #0040A7;
     font-size: 14px;
+    font-weight: bold;
 }
 
-.slick-hoteles .ubicacion-texto p.texto {
+.seccion-hoteles .ubicacion-texto p.texto {
     color: #888B97;
     font-size: 14px;
 }

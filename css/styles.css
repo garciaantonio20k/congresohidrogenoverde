@@ -14,7 +14,7 @@ p {
     vertical-align: middle;
     color: #95C154;
     width: 30px;
-    height: 5px;
+    height: 10px;
     margin-right: 10px;
     opacity: 1;
 }
@@ -137,27 +137,46 @@ Newsletter
     margin-right: 10px;
 
 }
+
 .texto-azul {
     color: var(--boton-letra-azul);
 }
+
 .fondo-blanco {
- background-color: white;   
+    background-color: white;
 }
+
 .tabla {
     width: 100%;
-    
+
 }
+
 .tabla tr {
     text-align: center;
 }
+
 .tabla td {
     text-align: center;
 }
+
 .fila-titulo {
-    background-color: white;   
+    background-color: white;
     color: var(--boton-letra-azul);
 }
+
 .tabla-programa .horario {
     text-align: left;
     font-size: 1em;
+}
+
+.navbar .nav-item .nav-link {
+    background-color: var(--boton-fondo-azul) !important;
+    color: var(--boton-letra-azul) !important;
+    border: 1px solid var(--boton-letra-azul) !important;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    background-color: var(--boton-fondo-azul) !important;
+    color: var(--boton-letra-azul) !important;
+    border: 1px solid var(--boton-letra-azul) !important;
 }
