@@ -287,3 +287,33 @@ Newsletter
         border-radius: 16px;
     }
 }
+
+/* tabla programa */
+.tabla-programa {
+    background-color: #E3E3E3;
+    color: #6F87CA;
+}
+
+.tabla-programa strong {
+    color: #465BBC;
+}
+
+.tabla-programa-barra {
+    background-color: #5470B2;
+}
+
+.tabla-programa-bloque1 {
+    background-color: #EE9E6C;
+    color: #5470B2;
+    text-align: center;
+}
+
+.tabla-programa-sitio {
+    color: #7B8EBA;
+}
+
+.tabla-programa-bloque2 {
+    background-color: #BAABF7;
+    color: #0437A0;
+    text-align: center;
+}
