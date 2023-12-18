@@ -47,60 +47,61 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
-
     <!-- navegacion final -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img alt="" height="37"
-                    src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logo-color.png" width="150" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="inicio_798772332_130763.html"><img alt="" height="37"
+                    src="images/logos/logo-color.png" width="150" /></a><button aria-controls="navbarToggler"
+                aria-expanded="false" aria-label="Cambiar navegacion" class="navbar-toggler"
+                data-target="#navbarToggler" data-toggle="collapse" type="button"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-row justify-content-around mx-md-auto align-items-end">
-
-                    <li class="nav-item">
-                        <a class="menu-enlace active" aria-current="page"
-                            href="programa_798772614_131312.html">Programa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="menu-enlace active" aria-current="page"
-                            href="programa-paralelo_798772644_131374.html">Programa
-                            Paralelo</a>
-                    </li>
-                    <li class="nav-item dropdown" style="display: none;">
-                        <a class="menu-enlace dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Comites
-                        </a>
-                        <ul class="menu-enlace dropdown-menu">
-                            <li><a class="menu-enlace dropdown-item" href="#">Comite Honor</a></li>
-                            <li><a class="menu-enlace dropdown-item" href="#">Comite Tecnico</a></li>
+                    <li class=" nav-item dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button">Programas</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/programa_798772614_131312.html">Principal</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/programa-paralelo_798772644_131374.html">Paralelo</a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item" style="display: none;">
-                        <a class="menu-enlace" href="#">Zona Expositiva</a>
+
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                            role="button">Comit&eacute;s </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="/comite-de-honor_798772499_131092.html">Comit&eacute; de
+                                    Honor</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/comite-tecnico_798772500_131093.html">Comit&eacute;
+                                    t&eacute;cnico</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item" style="display: none;">
-                        <a class="menu-enlace" href="/prensa_798772497_131085.html">Prensa</a>
+
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="/prensa_798772497_131085.html">Prensa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="menu-enlace" href="/contacto_798772498_131091.html">Contacto</a>
+                        <a class="nav-link" href="/contacto_798772498_131091.html">Contacto</a>
                     </li>
                     <li>
-                        <!-- enlace subscripcion -->
-                        <a class="menu-btn-inscripcion rounded-pill" href="#">&iexcl;Inscr&iacute;bete!</a>
+                        <a class="btn-iscribete-menu" href="#">&iexcl;Inscr&iacute;bete!</a>
                     </li>
                 </ul>
-            </div> <!-- fin collapse -->
+
+            </div>
         </div>
     </nav>
-    </div><!-- fin row -->
+
+
 
     <!-- section -->
 
@@ -111,22 +112,22 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs justify-content-center border-bottom-0" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link texto-blanco fondo-verde rounded-4 p-2 " data-bs-toggle="tab" href="#miercoles">
+                    <a class="nav-link texto-blanco fondo-verde rounded-4 p-2 active" data-toggle="tab"
+                        href="#miercoles">
                         MIERCOLES 7 FEBRERO
                         <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-flecha-abajo.svg"
                             alt="" width="35px" class="m-lg-2">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fondo-verde rounded-4 p-2 texto-blanco active" data-bs-toggle="tab"
-                        href="#jueves">
+                    <a class="nav-link fondo-verde rounded-4 p-2 texto-blanco" data-toggle="tab" href="#jueves">
                         JUEVES 8 FEBRERO
                         <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-flecha-abajo.svg"
                             alt="" width="35px" class="m-lg-2">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link texto-blanco  fondo-verde rounded-4 p-2" data-bs-toggle="tab" href="#viernes">
+                    <a class="nav-link texto-blanco  fondo-verde rounded-4 p-2" data-toggle="tab" href="#viernes">
                         VIERNES 9 FEBRERO
                         <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-flecha-abajo.svg"
                             alt="" width="35px" class="m-lg-2">
@@ -136,12 +137,12 @@
 
             <!-- Tab panes -->
             <div class="tab-content mt-5 mb-5">
-                <div id="miercoles" class="container tab-pane fondo-azul  ">
+                <div id="miercoles" class="container tab-pane fondo-azul show active ">
                     <div class="fondo-verde p-3 rounded-3">
 
                         <h2 class="text-center">Programa Miercoles 7 Febrero</h2>
 
-                        <table class="tabla">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Horario</th>
@@ -153,7 +154,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="fila-titulo">
+                                <tr>
                                     <td class="text-center">09:00 - 10:00</td>
                                     <td colspan="5" class="text-center">WELCOME DESK (SALÓN DE CHIMENEAS)</td>
                                 </tr>
@@ -202,12 +203,12 @@
                             </tbody>
                         </table>
                     </div>
-                </div> <!-- fin tab-pane -->
+                </div> <!-- fin tab miercoles -->
                 <!-- tab-pane 8 jueves -->
                 <div id="jueves" class="container tab-pane fade">
                     <div class="fondo-verde">
                         <h2 class="text-center">Programa Jueves 8 Febrero</h2>
-                        <table class="tabla">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Horario</th>
@@ -219,7 +220,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="fila-titulo">
+                                <tr>
                                     <td class="text-center">09:00 - 09:30</td>
                                     <td colspan="1">7</td>
                                     <td>HUESA</td>
@@ -308,17 +309,17 @@
                     <div class="fondo-azul">
                         <h2 class="me-lg-1 mt-3">Ponentes</h2>
                         <div class="row m-3">
-                            <div class="col">
-                                <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/programa/paralelo/JAVIER_BUIL_CAMPOS_BASESITEMAS.jpg"
-                                    alt="" class="rounded-3 img-fluid" width="120"><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/JAVIER_BUIL_CAMPOS_BASESITEMAS.jpg" alt=""
+                                    class="img-fluid"><br>
                                 Javier Buil Campos
                             </div>
-                            <div class="col">
-                                <img src="https://placehold.co/120x180" alt="" class="rounded-3 img-fluid"><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/marcos-lopez-brea.jpg" alt="" class="img-fluid"><br>
                                 Marcos López-Brea Baquero
                             </div>
-                            <div class="col">
-                                <img src="https://placehold.co/120x180" alt="" class="rounded-3 img-fluid"><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/fernando-isorna-llerena.jpg" alt="" class="img-fluid"><br>
                                 Fernando Isorna Llerena
                             </div>
                         </div>
@@ -326,10 +327,11 @@
                 </div> <!-- fin tab jueves -->
 
 
-                <div id="viernes" class="container tab-pane fade show active"><br>
+                <!-- tab viernes -->
+                <div id="viernes" class="container tab-pane fade"><br>
                     <div class="fondo-verde p-2 rounded-3">
                         <h2 class="text-center">Programa Viernes 9 Febrero</h2>
-                        <table class="tabla tabla-programa">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
                                     <th>Horario</th>
@@ -421,23 +423,22 @@
                     <div class="fondo-azul">
                         <h2 class="me-lg-1 mt-3">Ponentes</h2>
                         <div class="row m-3">
-                            <div class="col">
-                                <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/programa/paralelo/Jordi_Diaz_Nivera_SWAGELOK.jpg"
-                                    alt="" class="rounded-3 img-fluid" width="120"><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/Jordi_Diaz_Nivera_SWAGELOK.jpg" alt="" class="img-fluid"><br>
                                 Jordi Díaz Nivera
                             </div>
-                            <div class="col">
-                                <img src="https://placehold.co/120x180" alt=""><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/eduardo-pine.jpg" alt="Eduardo Pine"><br>
                                 Eduardo Pine
                             </div>
-                            <div class="col">
-                                <img src="https://placehold.co/120x180" alt=""><br>
+                            <div class="col-md-2 col-6 text-center">
+                                <img src="images/ponentes/carlos-del-prestamo-elyse.jpg" alt=""><br>
                                 Carlos del Prestamo
                             </div>
                         </div>
                     </div>
-                </div> <!-- fin tab jueves -->
-            </div> <!-- fin tab viernes -->
+                </div> <!-- fin tab viernes -->
+            </div>
 
         </div> <!-- fin tabs -->
     </div>
@@ -448,7 +449,7 @@
     <!-- fin section programa -->
 
 
-    </div> <!-- fin container-->
+
 
 
 
@@ -461,17 +462,19 @@
                         <h2 class="mb-3">
                             Suscr&iacute;bete a<br />
                             nuestra newsletter</h2>
-                        <div class="container-newsletter">
-                            <div>
-                                <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-newsletter.png"
-                                    alt="">
+                        <div class="container-newsletter col-xl-6 col-lg-5 col-md-6 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-2 col-lg-2 col-md-1 col-sm-1 col-1">
+                                    <img src="images/ico-newsletter.png" alt="">
+                                </div>
+                                <div class="col-xl-7 col-lg-7 col-md-8 col-sm-5 col-3">
+                                    <input type="text" name="" id="" placeholder="Tu email aqui" class="input-text">
+                                </div>
+                                <div class="col-xl-2 col-lg-2  col-md-1 col-sm-2 col-1">
+                                    <input type="submit" value="Suscribete" class="input-submit">
+                                </div>
                             </div>
-                            <div>
-                                <input type="text" name="" id="" placeholder="Tu email aqui" class="input-text">
-                            </div>
-                            <div>
-                                <input type="submit" value="Suscribete" class="input-submit">
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -479,12 +482,12 @@
         </div>
     </section> <!-- end seccion newsletter -->
 
-    <section class="footer">
-        <div class="container pb-3">
+    <!-- footer -->
+    <footer>
+        <div class=" container pb-3">
             <div class="row">
                 <div class="col-md-4 mb-4 text-center text-md-start">
-                    <img alt="H2V" src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logo-color.png"
-                        width="144" />
+                    <img alt="H2V" src="images/logos/logo-color.png" width="144" />
                 </div>
                 <div class="col-md-4">
                     <h4>
@@ -492,22 +495,17 @@
                     <div class="co-menu">
                         <ul>
                             <li>
-                                <a href="/">Inicio</a>
+                                <a href="inicio_798772332_130763.html">Inicio</a>
                             </li>
                             <li>
-                                <a href="programa_798772614_131312.html">Programa</a>
+                                <a href="programa_798772614_131312.html">Programa Principal</a>
                             </li>
                             <li>
-                                <a href="#espacio-expositivo">Espacio Expositivo</a>
+                                <a href="programa-paralelo_798772644_131374.html">Programa Paralelo</a>
                             </li>
-                            <li>
-                                <a href="#sede">Sede</a>
-                            </li>
+
                         </ul>
                         <ul>
-                            <li>
-                                <a href="#hoteles">Hoteles</a>
-                            </li>
                             <li>
                                 <a href="/comite-de-honor_798772499_131092.html">Comit&eacute; de Honor</a>
                             </li>
@@ -515,7 +513,7 @@
                                 <a href="/comite-tecnico_798772500_131093.html">Comit&eacute; T&eacute;cnico</a>
                             </li>
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="contacto_798772498_131091.html">Contacto</a>
                             </li>
                         </ul>
                     </div>
@@ -523,24 +521,24 @@
                 <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
                     <ul class="co-rrss">
                         <li>
-                            <a href="https://www.facebook.com/congresohidrogenoverde/" target="_blank"><img
-                                    alt="Facebook"
-                                    src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-fb.svg" /></a>
+                            <a href="https://www.facebook.com/congresohidrogenoverde/" target="_blank">
+                                <img alt="Facebook" src="images/ico-fb.svg" />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/CongresoH2V"><img alt="Twitter"
-                                    src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-tw.svg"
-                                    target="_blank" /></a>
+                            <a href="https://twitter.com/CongresoH2V">
+                                <img alt="Twitter" src="images/ico-tw.svg" target="_blank" />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/congresohidrogenoverde/" target="_blank"><img
-                                    alt="Instagram"
-                                    src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-ig.svg" /></a>
+                            <a href="https://www.instagram.com/congresohidrogenoverde/" target="_blank">
+                                <img alt="Instagram" src="images/ico-ig.svg" />
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/showcase/congreso-hidrogeno-verde/" target="_blank"><img
-                                    alt="Linkedin"
-                                    src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-in.svg" /></a>
+                            <a href="https://www.linkedin.com/showcase/congreso-hidrogeno-verde/" target="_blank">
+                                <img alt="Linkedin" src="images/ico-in.svg" />
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -555,12 +553,13 @@
                     <p>
                         Copyright &copy; 2023 Viajes Luz. Todos los derechos reservados.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#">T&eacute;rminos de uso</a><a href="#">Pol&iacute;tica de privacidad</a>
+                <div class="col-md-6 text-right text-md-end">
+                    <a href="terminos-y-condiciones_798772645_131382.html">T&eacute;rminos de uso</a>
+                    <a href="politica-privacidad_798772645_131381.html">Pol&iacute;tica de privacidad</a>
                 </div>
             </div>
         </div>
-    </section>
+    </footer><!-- fin seccion footer -->
 
     <script>
         $(document).ready(function () {

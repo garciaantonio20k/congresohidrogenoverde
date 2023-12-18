@@ -126,26 +126,10 @@ p {
     background: rgba(255, 255, 255, 0.2) !important;
 }
 
-.navbar .btn-iscribete-menu {
-    color: #0040A7;
-    background: white;
-    text-decoration: none;
-    padding: 4px 20px !important;
-    border-radius: 25px;
-    border: 1px solid white;
-    transition: all .3s ease-out;
-}
 
-@media (min-width: 1560px) {
-    .navbar .btn-iscribete-menu {
-        margin-left: 3rem;
-    }
-}
 
-.navbar .btn-iscribete-menu:hover {
-    color: white;
-    background: #95C154;
-}
+
+
 
 .navbar .navbar-brand .logo-blanco {
     width: 90px;
@@ -192,15 +176,7 @@ p {
     background: rgba(255, 255, 255, 0.2) !important;
 }
 
-.navbar.affix .btn-iscribete-menu {
-    color: white;
-    background: #0040A7;
-    border: 1px solid #0040A7;
-}
 
-.navbar.affix .btn-iscribete-menu:hover {
-    background: #95C154;
-}
 
 /**************
 HERO
