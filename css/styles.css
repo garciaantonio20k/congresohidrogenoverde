@@ -289,31 +289,58 @@ Newsletter
 }
 
 /* tabla programa */
+.separador-programa {
+    background-color: #2056B3;
+    height: 2px;
+}
 .tabla-programa {
-    background-color: #E3E3E3;
-    color: #6F87CA;
+    width:100%;
 }
-
-.tabla-programa strong {
-    color: #465BBC;
+.tabla-programa td{
+    padding:5px;
 }
-
-.tabla-programa-barra {
-    background-color: #5470B2;
+.tabla-programa tr {
+    border-bottom: 1px solid #fff;
 }
-
-.tabla-programa-bloque1 {
-    background-color: #EE9E6C;
-    color: #5470B2;
+.fila-hora {
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-family: lexend,monospace;
+}
+.fila-icono {
+    width: 32px;
+    padding: 0 5px;
+    color: white;
+}
+.fila-tipo {
+    text-transform: uppercase;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    white-space:nowrap;
+}
+.fila-texto {
+    text-transform: uppercase;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    white-space:nowrap;
+}
+.fila-texto-azul {
+    text-transform: uppercase;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    white-space:nowrap;
+    color: #0738BB;
+}
+.fila-ubicacion {
+    text-align: right;
+    font-size: clamp(0.2rem, 1vw, 0.8rem);
+}
+.fila-bloque {
+    font-size: clamp(0.5rem, 1rem, 1rem);
+    color:var(--fondo-verde);
+    background-color: #fff;
     text-align: center;
+    font-size:2rem;
 }
-
-.tabla-programa-sitio {
-    color: #7B8EBA;
+.borde-azul-alto {
+    border-top: 2px solid #0738BB;
 }
-
-.tabla-programa-bloque2 {
-    background-color: #BAABF7;
-    color: #0437A0;
-    text-align: center;
+.borde-azul-bajo {
+    border-bottom: 2px solid #0738BB;
 }
