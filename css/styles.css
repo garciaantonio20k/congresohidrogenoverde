@@ -284,6 +284,12 @@ Newsletter
 
 .tabla-programa td {
     padding: 5px;
+    vertical-align: top;
+    /*border: 1px solid blue;*/
+}
+
+.tabla-programa img {
+    vertical-align: top;
 }
 
 .tabla-programa tr {
@@ -309,9 +315,10 @@ Newsletter
 
 .fila-texto {
     text-transform: uppercase;
-    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.6rem, 1vw, 1rem);
     white-space: nowrap;
 }
+
 
 .fila-texto-azul {
     text-transform: uppercase;
@@ -323,14 +330,20 @@ Newsletter
 .fila-ubicacion {
     text-align: right;
     font-size: clamp(0.2rem, 1vw, 0.8rem);
+    white-space: nowrap;
+}
+
+.fila-ubicacion-larga {
+    text-align: right;
+    font-size: clamp(0.2rem, 1vw, 0.8rem);
+    white-space: wrap;
 }
 
 .fila-bloque {
-    font-size: clamp(0.5rem, 1rem, 1rem);
+    font-size: 1rem;
     color: var(--fondo-verde);
     background-color: #fff;
     text-align: center;
-    font-size: 2rem;
 }
 
 .borde-azul-alto {
@@ -363,4 +376,26 @@ Newsletter
 .ponente p {
     font-size: 0.8rem;
     text-align: left;
+}
+
+/* moviles */
+@media (width < 600px) {
+    .fila-texto {
+        text-transform: uppercase;
+        font-size: clamp(0.6rem, 1vw, 1rem);
+        white-space: wrap;
+    }
+
+    .fila-ubicacion {
+        text-transform: uppercase;
+        font-size: clamp(0.6rem, 1vw, 1rem);
+        white-space: wrap;
+    }
+
+    .fila-ubicacion-larga {
+        text-align: right;
+        font-size: clamp(0.2rem, 1vw, 0.5rem);
+        white-space: wrap;
+        width: 100px;
+    }
 }
