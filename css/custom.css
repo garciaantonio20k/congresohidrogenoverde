@@ -849,7 +849,7 @@ TABS
 
 .tab-content.show {
     display: block;
-    width: 60%;
+    width: 100%;
 }
 
 /************
