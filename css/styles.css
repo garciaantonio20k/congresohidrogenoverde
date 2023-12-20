@@ -239,6 +239,10 @@ Newsletter
         object-fit: cover;
     }
 
+    .ponente-imagen {
+        text-align: center;
+    }
+
     .nav-item .active {
         color: var(--boton-letra-azul) !important;
         background-color: var(--fondo-verde) !important;
@@ -375,7 +379,7 @@ Newsletter
 
 .ponente p {
     font-size: 0.8rem;
-    text-align: left;
+    text-align: center;
 }
 
 /* moviles */
