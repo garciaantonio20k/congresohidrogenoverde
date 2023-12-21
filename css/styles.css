@@ -382,12 +382,23 @@ Newsletter
     text-align: center;
 }
 
+.fila-texto-larga {
+        text-transform: uppercase;
+        font-size: clamp(0.6rem, 1vw, 1rem);
+        white-space: no-wrap;
+    }
+    
 /* moviles */
 @media (width < 600px) {
     .fila-texto {
         text-transform: uppercase;
         font-size: clamp(0.6rem, 1vw, 1rem);
         white-space: wrap;
+    }
+    .fila-texto-larga {
+        text-transform: uppercase;
+        font-size: clamp(0.6rem, 1vw, 1rem);
+        white-space: no-wrap;
     }
 
     .fila-ubicacion {
