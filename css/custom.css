@@ -280,8 +280,8 @@ HERO
         left: 50%;
         width: 50%;
         z-index: -1;
-        height: 680px;
-        background: url(../images/fd-hero.jpg);
+        height: 280px;
+        background: url('../images/fd-hero.jpg');
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: cover;
