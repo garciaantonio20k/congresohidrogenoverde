@@ -198,7 +198,7 @@ HERO
     flex-direction: row;
     background: url("https://garciaantonio20k.github.io/congresohidrogenoverde/images/banner-top-mobile.jpg") no-repeat center center;
     background-size: cover;
-    padding: 10rem 15px 1rem 15px;
+    padding: 1rem 15px 1rem 15px;
     border-radius: 35px;
 }
 
@@ -208,6 +208,7 @@ HERO
         background: none;
         margin: 0 0 20px 20px;
         flex-direction: row;
+        padding: 10rem 15px 1rem 15px;
     }
 }
 
@@ -276,11 +277,11 @@ HERO
     .bl-hero .bg {
         display: block;
         position: absolute;
-        top: 0;
-        left: 50%;
-        width: 50%;
+        top: 70px;
+        left: 40%;
+        width: 100%;
         z-index: -1;
-        height: 280px;
+        height: 200px;
         background: url('../images/fd-hero.jpg');
         background-position: 0 100%;
         background-repeat: no-repeat;
