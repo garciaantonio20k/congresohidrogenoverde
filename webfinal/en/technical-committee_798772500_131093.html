@@ -21,7 +21,7 @@
   <!-- navegacion final -->
   <nav class="navbar fixed-top navbar-expand-lg" style="margin-bottom: 10px;">
     <div class="container">
-      <a class="navbar-brand" href="home_798772658_131399.html"><img alt="" height="37"
+      <a class="navbar-brand" href="/index.cfm?id_idioma=EN"><img alt="" height="37"
           src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-color.png"
           width="150" /></a><button aria-controls="navbarToggler" aria-expanded="false" aria-label="Cambiar navegacion"
         class="navbar-toggler" data-target="#navbarToggler" data-toggle="collapse" type="button"><span
@@ -34,11 +34,11 @@
               role="button">Program</a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="program_798772658_131400.html">Main</a>
+                <a class="dropdown-item" href="program_798772614_131312.html">Main</a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="parallel-programme_798772658_131401.html">Parallel</a>
+                <a class="dropdown-item" href="parallel-program_798772644_131374.html">Parallel</a>
               </li>
             </ul>
           </li>
@@ -48,12 +48,12 @@
               role="button">Committees</a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="honour-committee_798772658_131402.html">
+                <a class="dropdown-item" href="honour-committee_798772499_131092.html">
                   Honorary Committee
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="technical-committee_798772658_131403.html">
+                <a class="dropdown-item" href="technical-committee_798772500_131093.html">
                   Technical Committee
                 </a>
               </li>
@@ -64,19 +64,19 @@
           </li>
           <li class="nav-item">
             <a class="nav-link btn-iscribete-menu"
-              href="https://congresonacionalhidrogenoverde.tufabricadeventos.com/general_798772497_131083.html"
+              href="https://www.congresohidrogenoverde.com/formAlone.cfm?short=RM3GUntjToyDY"
               target="_blank">Register</a>
           </li>
           <li>
             <div class="row">
               <div class="col-1 ml-5 mr-2">
-                <a href="inicio_798772332_130763.html">
+                <a href="/index.cfm?id_idioma=ES">
                   <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-spain.png"
                     alt="Español" width="32px" class="rounded-circle">
                 </a>
               </div>
               <div class="col-1">
-                <a href="home_798772658_131399.html">
+                <a href="/index.cfm?id_idioma=EN">
                   <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-english.png"
                     alt="English" width="32px" class="rounded-circle">
                 </a>
@@ -480,6 +480,12 @@
     </div>
   </footer><!-- fin seccion footer -->
 
+  <script>
+    $(document).ready(function () {
+      let idioma = document.getElementById('id_idioma');
+      idioma !== null ? idioma.style.display = 'none' : '';
+    });
+  </script>
 
 </body>
 

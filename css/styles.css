@@ -267,7 +267,9 @@ Newsletter
     }
 
     .navbar {
-        background-color: rgba(255, 255, 255, 0.5);
+        /* quitamos opacidad para ocultar selector idioma */
+        /* background-color: rgba(255, 255, 255, 0.5);*/
+        background-color: #fff;
 
     }
 
@@ -383,11 +385,11 @@ Newsletter
 }
 
 .fila-texto-larga {
-        text-transform: uppercase;
-        font-size: clamp(0.6rem, 1vw, 1rem);
-        white-space: no-wrap;
-    }
-    
+    text-transform: uppercase;
+    font-size: clamp(0.6rem, 1vw, 1rem);
+    white-space: no-wrap;
+}
+
 /* moviles */
 @media (width < 600px) {
     .fila-texto {
@@ -395,6 +397,7 @@ Newsletter
         font-size: clamp(0.6rem, 1vw, 1rem);
         white-space: wrap;
     }
+
     .fila-texto-larga {
         text-transform: uppercase;
         font-size: clamp(0.6rem, 1vw, 1rem);

@@ -22,7 +22,7 @@
   <!-- navegacion final -->
   <nav class="navbar fixed-top navbar-expand-lg" style="margin-bottom: 10px;">
     <div class="container">
-      <a class="navbar-brand" href="home_798772658_131399.html"><img alt="" height="37"
+      <a class="navbar-brand" href="/index.cfm?id_idioma=EN"><img alt="" height="37"
           src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-color.png"
           width="150" /></a><button aria-controls="navbarToggler" aria-expanded="false" aria-label="Cambiar navegacion"
         class="navbar-toggler" data-target="#navbarToggler" data-toggle="collapse" type="button"><span
@@ -35,11 +35,11 @@
               role="button">Program</a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="program_798772658_131400.html">Main</a>
+                <a class="dropdown-item" href="program_798772614_131312.html">Main</a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="parallel-programme_798772658_131401.html">Parallel</a>
+                <a class="dropdown-item" href="parallel-program_798772644_131374.html">Parallel</a>
               </li>
             </ul>
           </li>
@@ -49,12 +49,12 @@
               role="button">Committees</a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="honour-committee_798772658_131402.html">
+                <a class="dropdown-item" href="honour-committee_798772499_131092.html">
                   Honorary Committee
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="technical-committee_798772658_131403.html">
+                <a class="dropdown-item" href="technical-committee_798772500_131093.html">
                   Technical Committee
                 </a>
               </li>
@@ -65,19 +65,19 @@
           </li>
           <li class="nav-item">
             <a class="nav-link btn-iscribete-menu"
-              href="https://congresonacionalhidrogenoverde.tufabricadeventos.com/general_798772497_131083.html"
+              href="https://www.congresohidrogenoverde.com/formAlone.cfm?short=RM3GUntjToyDY"
               target="_blank">Register</a>
           </li>
           <li>
             <div class="row">
               <div class="col-1 ml-5 mr-2">
-                <a href="inicio_798772332_130763.html">
+                <a href="/index.cfm?id_idioma=ES">
                   <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-spain.png"
                     alt="Español" width="32px" class="rounded-circle">
                 </a>
               </div>
               <div class="col-1">
-                <a href="home_798772658_131399.html">
+                <a href="/index.cfm?id_idioma=EN">
                   <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-english.png"
                     alt="English" width="32px" class="rounded-circle">
                 </a>
@@ -108,8 +108,7 @@
             <div class="co-hero--inscribete">
               <img alt="Ticket"
                 src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-inscribete.svg" />
-              <a class="btn-inscribete"
-                href="https://congresonacionalhidrogenoverde.tufabricadeventos.com/general_798772497_131083.html"
+              <a class="btn-inscribete" href="https://www.congresohidrogenoverde.com/formAlone.cfm?short=RM3GUntjToyDY"
                 target="_blank">Register</a>
             </div>
           </div>
@@ -895,12 +894,12 @@
     <div class="row">
       <div class="col-12">
         <footer>
-          <div class=" container pb-3">
+          <div class="container pb-3">
             <div class="row">
               <div class="col-md-4 mb-4 text-center text-md-start">
                 <img alt="H2V"
                   src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-color.png"
-                  width="144" />
+                  width="144">
               </div>
               <div class="col-md-4">
                 <h4>
@@ -908,7 +907,7 @@
                 <div class="co-menu">
                   <ul>
                     <li>
-                      <a href="home_798772658_131399.html">Home</a>
+                      <a href="/index.cfm?id_idioma=EN">Home</a>
                     </li>
                     <li>
                       <a href="program_798772658_131400.html">Main Program</a>
@@ -962,7 +961,7 @@
             </div>
             <div class="row mb-3">
               <div class="col-12">
-                <hr />
+                <hr>
               </div>
             </div>
             <div class="row co-underfooter mt-3">
@@ -983,7 +982,10 @@
   <!-- fin seccion footer -->
 
   <script defer>
+
     $(document).ready(function () {
+      let idioma = document.getElementById('id_idioma');
+      idioma !== null ? idioma.style.display = 'none' : '';
       /* slider hoteles */
       /*
       $('.slick-hoteles').slick({

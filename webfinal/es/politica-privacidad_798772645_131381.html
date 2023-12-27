@@ -21,7 +21,7 @@
     <!-- navegacion final -->
     <nav class="navbar fixed-top navbar-expand-lg" style="margin-bottom: 10px;">
         <div class="container">
-            <a class="navbar-brand" href="inicio_798772332_130763.html"><img alt="" height="37"
+            <a class="navbar-brand" href="/index.cfm?id_idioma=ES"><img alt="" height="37"
                     src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-color.png"
                     width="150" /></a><button aria-controls="navbarToggler" aria-expanded="false"
                 aria-label="Cambiar navegacion" class="navbar-toggler" data-target="#navbarToggler"
@@ -59,28 +59,35 @@
                             </li>
                         </ul>
                     </li>
-                    <!--
-                    <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="#espacio-expositivo">Zona Expositiva</a>
-                    </li>
-                    -->
-                    <!-- 
-                    <li class="nav-item">
-                        <a aria-current="page" class="nav-link" href="/prensa_798772497_131085.html">Prensa</a>
-                    </li>
-                    -->
                     <li class="nav-item">
                         <a class="nav-link" href="/contacto_798772498_131091.html">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-iscribete-menu"
-                            href="https://congresonacionalhidrogenoverde.tufabricadeventos.com/general_798772497_131083.html"
+                            href="https://www.congresohidrogenoverde.com/formAlone.cfm?short=Zth3gXK2rlERT"
                             target="_blank">&iexcl;Inscr&iacute;bete!</a>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-1 ml-5 mr-2">
+                                <a href="/index.cfm?id_idioma=ES">
+                                    <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-spain.png"
+                                        alt="Español" width="32px" class="rounded-circle">
+                                </a>
+                            </div>
+                            <div class="col-1">
+                                <a href="/index.cfm?id_idioma=EN">
+                                    <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/flag-english.png"
+                                        alt="English" width="32px" class="rounded-circle">
+                                </a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- fin navegacion final -->
 
     <section class="bl-title">
         <div class="container">
@@ -292,7 +299,7 @@
                     <div class="co-menu">
                         <ul>
                             <li>
-                                <a href="inicio_798772332_130763.html">Inicio</a>
+                                <a href="/index.cfm?id_idioma=ES">Inicio</a>
                             </li>
                             <li>
                                 <a href="programa_798772614_131312.html">Programa Principal</a>
@@ -363,7 +370,12 @@
             </div>
         </div>
     </footer><!-- fin seccion footer -->
-
+    <script>
+        $(document).ready(function () {
+            let idioma = document.getElementById('id_idioma');
+            idioma !== null ? idioma.style.display = 'none' : '';
+        });
+    </script>
 </body>
 
 </html>
