@@ -258,7 +258,8 @@ HERO
 @media (min-width: 1200px) {
     .bl-hero .co-cifras div {
         padding: 15px 0 15px 15px;
-        font-size: 1.1rem;
+        /*font-size: 1.1rem; 28122023 hacer mas pequeña */
+        font-size: 0.9rem;
         gap: 10px;
     }
 }
