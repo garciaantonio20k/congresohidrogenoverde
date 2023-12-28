@@ -1,0 +1,307 @@
+function tPreguntasDeControl() 
+{
+	this.inheritFrom = tBase;
+    this.inheritFrom();
+
+    this.id_grupo = null;
+    this.id_submenu = null;
+
+    // Intervalo de tiempo para mirar preguntas a mostrar
+    this.tiempoIntervaloPreguntaAMostrar = 10 * 1000; // 5 segundos
+    this.intervaloPreguntaAMostrar = null;
+
+    // Tiempo en que la ventana está abierta esperando a responder. Pasado este tiempo se cierra sin posibilidad de responder de nuevo
+    this.tiempoEsperaRespuestaPregunta = 50 * 1000; // 40 segundos
+    this.idTimeout = null;
+
+    this.ventanas = [];
+
+    this.tiempoAntesDeCerrar = 1000; // 1 segundo
+    this.mostrarTiempoAntesDeCerrar = false;
+    this.intervaloTiempoAntesDeCerrar = null;
+
+    this.ventanaPregunta = null;
+    
+
+    this.init = function()
+    {
+        this.initPollPreguntaAMostrar();
+    }
+
+    this.initPollPreguntaAMostrar = function()
+    {
+        this.intervaloPreguntaAMostrar = setInterval(function()
+        {
+            objGestorPreguntasDeControl.mostrarPregunta();
+        }, this.tiempoIntervaloPreguntaAMostrar)
+    }
+
+    this.mostrarPregunta = function()
+    {
+        // Si ya hay otra pregunta mostrada no pintamos la segunda
+        if (this.ventanaPregunta == null)
+        {
+            var data = {id_submenu : this.id_submenu};
+            $.post(this.SCRIPT_NAME + 'index.cfm?event=preguntasDeControl.mostrarPregunta', data, function(data)
+            {
+                if (data.HAYPREGUNTAQUEMOSTRAR)
+                {
+                    objGestorPreguntasDeControl.abrirVentanaPregunta(data);
+                }
+            }, 'json');
+        }
+        else
+        {
+            // La ventana está bierta
+            if (this.intervaloPreguntaAMostrar)
+            {
+                clearInterval(this.intervaloPreguntaAMostrar);
+            }
+            this.intervaloPreguntaAMostrar = null;
+        }
+    }
+
+    this.abrirVentanaPregunta = function(datosPregunta)
+    {
+        if (datosPregunta.PREGUNTAPARAMOSTRAR.HAYPREGUNTAQUEMOSTRAR)
+        {
+            objDialogos.hideLoading();
+
+            this.ventanaPregunta = {};
+            this.ventanaPregunta.fechaYhora = new Date();
+            this.ventanaPregunta.ventana = new BootstrapDialog({
+                closable: false,
+                message: $('<div></div>').html(datosPregunta.PREGUNTAPARAMOSTRAR.DATOSPREGUNTAAMOSTRAR.RENDER),
+                onshown: function(dialogRef)
+                {
+                    objGestorPreguntasDeControl.ventanaPreguntaAbierta();
+                    objGestorPreguntasDeControl.marcarPreguntaComoPresentadaAParticipante();
+                },
+                onhide : function(dialogRef)
+                {
+                    objGestorPreguntasDeControl.ventanaPreguntaCerrada();
+                }
+            });
+            
+            this.ventanaPregunta.ventana.open();
+        }
+    }
+
+    this.marcarPreguntaComoPresentadaAParticipante = function()
+    {
+        var form = $('form#fPregunta');
+        var id_pregunta = form.find('input#id_pregunta').val();
+        var data = 
+        {
+            id_pregunta : id_pregunta
+        };
+
+        $.post(this.SCRIPT_NAME + 'index.cfm?event=preguntasDeControl.marcarPreguntaComoPresentadaAParticipante', data, function(data)
+        {
+        }, 'json');
+    }
+
+    this.mostrarMensajeTiempoRestanteCerrarVentana = function(mensaje)
+    {
+        $('span#tiempoCierreVentanaPregunta').html(mensaje);
+    }
+
+    this.ventanaPreguntaAbierta = function()
+    {
+        if (this.mostrarTiempoAntesDeCerrar)
+        {
+            var seconds = (this.tiempoEsperaRespuestaPregunta / 1000);
+            objGestorPreguntasDeControl.mostrarMensajeTiempoRestanteCerrarVentana('00:' + (seconds < 10 ? "0" + seconds : seconds));
+            
+            this.iniciarCuentaAtras((this.tiempoEsperaRespuestaPregunta / 1000) - 1);
+        }
+
+        this.idTimeout = setTimeout(function()
+        {
+            objGestorPreguntasDeControl.cerrarVentanaPregunta();
+        }, this.tiempoEsperaRespuestaPregunta);
+    }
+
+    this.iniciarCuentaAtras = function(duration)
+    {
+        var timer = duration, minutes, seconds;
+        this.intervaloTiempoAntesDeCerrar = setInterval(function() 
+        {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            objGestorPreguntasDeControl.mostrarMensajeTiempoRestanteCerrarVentana(minutes + ":" + seconds);
+
+            if (--timer < 0) 
+            {
+                timer = duration;
+            }
+        }, this.tiempoAntesDeCerrar);
+    }
+
+    this.pararCuentaAtras = function()
+    {
+        if (this.intervaloTiempoAntesDeCerrar)
+        {
+            clearInterval(this.intervaloTiempoAntesDeCerrar);
+        }
+    }
+
+    this.cerrarVentanaPregunta = function()
+    {
+        if (this.idTimeout)
+        {
+            if (this.ventanaPregunta.ventana.isOpened())
+            {
+                this.ventanaPregunta.ventana.close();
+            }
+        }
+    }
+
+    this.ventanaPreguntaCerrada = function()
+    {
+        this.ventanaPregunta = null;
+        clearTimeout(this.idTimeout);
+        this.idTimeout = null;
+        this.pararCuentaAtras();
+        this.initPollPreguntaAMostrar();
+    }
+
+    this.cerrarVentanaActual = function()
+    {
+        if (this.ventanaPregunta.ventana != null)
+        {
+            this.ventanaPregunta.ventana.close();
+        }
+    }
+
+    this.guardarPreguntaTipoTexto = function()
+    {
+        var form = $('form#fPregunta');
+        var inputRespuesta = form.find('input#respuesta');
+        var respuesta = inputRespuesta.val();
+        var textoLibre = inputRespuesta.data("textolibre");
+
+        var puedoGrabar = false;
+
+        if (!textoLibre)
+        {
+            // No es texto libre, hay que comprobar si se ha escrito lo que se ha dicho
+            var textoAescribir = inputRespuesta.data("textoaescribir");
+
+            if (textoAescribir != respuesta)
+            {
+                // No Coinciden
+                puedoGrabar = false;
+                alert(objTraducciones.get(6586));
+            }
+            else
+            {
+                puedoGrabar = true;
+            }
+        }
+        else if ($.trim(respuesta) == '')
+        {
+            alert(objTraducciones.get(6587));
+            puedoGrabar = false;
+        }
+        else
+        {
+            puedoGrabar = true;
+        }
+
+        if (puedoGrabar)
+        {
+            var data = form.serialize();
+
+            $.post(this.SCRIPT_NAME + 'index.cfm?event=preguntasDeControl.guardarRespuestaPreguntaTipoTexto', data, function(data)
+            {
+                objDialogos.cortinilla(objMensajes.get(289));
+                objGestorPreguntasDeControl.cerrarVentanaActual();
+            }, 'json')
+            
+        }
+    }
+
+    this.guardarPreguntaTipoEleccion = function()
+    {
+        var form = $('form#fPregunta');
+        var formato = parseInt(form.find('input#formato').val());
+        var cantidadMaximaElementosAElegir = parseInt(form.find('input#cantidadMaximaElementosAElegir').val());
+        var puedoGrabar = false;
+        
+        var checked = 0;
+        if (formato == 1)
+        {
+            // COMBO
+            checked = form.find("select#respuesta").find('option:selected').length;
+            if (form.find("select#respuesta").find('option:selected').val() == '')
+            {
+                checked = 0;
+            }
+        }
+        else if (formato == 2)
+        {
+            // Radio o checkbox
+            checked = form.find("input#respuesta").filter(":checked").length;
+        }
+
+        if (checked == 0)
+        {
+            // Error: hay que seleccionar una opción
+            puedoGrabar = false;
+            alert(objTraducciones.get(6592));
+        }
+        else
+        {
+            if (checked == 1)
+            {
+                // Hemos elegido una opcion
+                if (cantidadMaximaElementosAElegir == 1)
+                {
+                    // Hemos elegido una opción y sólo podíamos elegir una. Todo OK.
+                    puedoGrabar = true;
+                }
+                else
+                {
+                    // Hemos elegido una opción y había que elegir más de una opción. ERROR
+                    puedoGrabar = false;
+                    alert(objTraducciones.get(6593));
+                }
+            }
+            else if (checked > 1)
+            {
+                // Hemos elegido varias
+                // Hemos elegido una opcion
+                if (cantidadMaximaElementosAElegir == 1)
+                {
+                    // Hemos elegido varias opciones y sólo podíamos elegir una. ERROR.
+                    puedoGrabar = false;
+                    alert(objTraducciones.get(6594));
+                }
+                else
+                {
+                    // Hemos elegido varias opciones y había que elegir más de una opción. Todo OK
+                    puedoGrabar = true;
+                }
+            }
+        }
+        
+
+        if (puedoGrabar)
+        {
+            var data = form.serialize();
+
+            $.post(this.SCRIPT_NAME + 'index.cfm?event=preguntasDeControl.guardarPreguntaTipoEleccion', data, function(data)
+            {
+                objDialogos.cortinilla(objMensajes.get(289));
+                objGestorPreguntasDeControl.cerrarVentanaActual();
+            }, 'json')
+        }
+    }
+}
+
+var objGestorPreguntasDeControl = new tPreguntasDeControl();

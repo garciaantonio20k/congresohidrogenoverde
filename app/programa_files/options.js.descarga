@@ -1,0 +1,25 @@
+function duplicate(source)
+{
+	return objFormSuscripcion.duplicate(source)
+} 
+
+var optionsDatePicker = 
+{
+	/*format: "dd/mm/yyyy",*/
+    language: "es",
+    multidate: false,
+    multidateSeparator: ",",
+    keyboardNavigation: false,
+    forceParse: false,
+    autoclose: true,
+    todayHighlight: true
+};
+
+var optionsDatePickerCalendario = optionsDatePicker;
+
+var optionsDialog = {};
+optionsDialog.width = ($(window).width() - 5) + 'px';
+optionsDialog.height = ($(window).height() - 5) + 'px';
+
+/*optionsDialog.width = Math.min($(window).width() - 5, 1000) + 'px';
+optionsDialog.height = $(window).height() - 5 + 'px';*/

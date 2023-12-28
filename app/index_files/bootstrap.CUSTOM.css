@@ -1,0 +1,63 @@
+.loading .modal-dialog 
+{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.slogan form .form-control
+{
+	height: auto;
+	margin: 0px
+}
+
+.slogan form .form-group
+{
+	padding-bottom: 0px
+}
+
+/* BOTON HELP */
+.boton-help {
+    cursor: pointer;
+}
+
+/* PARA COLOCAR FILTROS EN LAS TABLAS DE: PARTICIPANTES, MENSAJES, ETC... */
+form select.form-control-filtro-tabla
+{
+	font-size: 0.7em;
+}
+
+th#filtro-tabla
+{
+	
+}
+
+th#filtro-tabla form .form-group-filtro-tabla
+{
+	table-layout:auto;
+}
+/* FIN */
+
+.modal-dialog {
+    margin: 10px auto;
+    width: 600px;
+}
+
+.grupoLOPDCOnsentimientos
+{
+	font-size: 0.8em;
+}
+
+.descripcionConsentimiento
+{
+    padding-left: 20px;
+}
+
+.tituloGeneralConsentimientos
+{
+	font-weight: bold;
+}
+
+.descripcionGeneralConsentimientos
+{
+	padding-left: 20px;
+}

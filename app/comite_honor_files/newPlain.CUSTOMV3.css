@@ -1,0 +1,245 @@
+#pb_top {
+    max-width: 1440px;
+}
+
+#pb_top .panel_plain,
+.inicio #pb_top .panel_plain {
+    display: block;
+}
+
+#pb_top .panel_plain {
+    height: 41px;
+}
+
+#pb_top .crumb {
+    display: block;
+    height: 41px;
+    top: 0;
+    width: inherit;
+    max-width: inherit;
+    z-index: 99;
+    position: fixed;
+}
+
+.crumb .navbar-toggle {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #f6f6f6;
+    float: left;
+    /*font-size: 1.44444em;*/
+    font-size: 2.44444em;
+    height: 40px;
+    left: 0;
+    margin: 0 0 0 0.18889%;
+    padding: 0;
+    position: relative;
+    width: 40px;
+    z-index: 100;
+}
+
+#pb_top .crumb p {
+    line-height: 3.6em;
+}
+
+#pb_top .crumb p {
+    font-size: 0.66666666666667em;
+    line-height: 3.73333333333333em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#nav {
+    min-height: 0px;
+    height: 0px;
+}
+
+#nav .navbar-toggle {
+    display: none;
+}
+
+#nav .navbar-nav .open .dropdown-menu > li > a {
+    padding: 15px 0 12px 75px;
+    white-space: normal;
+}
+
+.newPlainDefault .product-form-group table > tbody > tr > td:nth-child(2n) {
+    background-color: inherit;
+}
+
+.modal-body .botones {
+    top: 0em;
+}
+
+.modal-body .botones-acciones-ventana {
+    top: 15px;
+}
+
+.datosPersonales .data {
+    max-width: 73%;
+}
+
+.table > tbody > tr > td .data.data-tipo-participanteMOB {
+    display: none;
+}
+
+.table > tbody > tr > td .data.data-tipo-participanteDKT {
+    display: block;
+}
+
+/* ajustes del televoto */
+.cabeceraResultadoTelevoto {
+    max-width: 90%;
+}
+
+.datosPersonales .avatar {
+    width: auto;
+}
+
+.datosPersonales .avatarFotoParticipante {
+    border: 0px;
+    border-radius: 50%;
+}
+
+.datosPersonales .logotipoFichaParticipante {
+    border: 0px;
+    border-radius: 0px;
+}
+
+.logotipoFichaParticipante .hrz {
+    width: 200px !important;
+    max-width: 200px !important;
+
+    height: auto !important;
+    max-height: 100% !important;
+}
+
+.logotipoFichaParticipante .vert {
+    height: 110px !important;
+    max-height: 110px !important;
+
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.logotipoFichaParticipante .square {
+    width: 110px !important;
+    max-width: 110px !important;
+
+    height: 110px !important;
+    max-height: 110px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .paginacionMB .btn-default,
+    .paginacionMB .btn-default .disabled {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 1.4em;
+    }
+
+    .newPlainDefault .paginacion button[type="button"].disabled {
+        border: 0px solid rgba(0, 0, 0, 0.25);
+    }
+
+    #pb_top .crumb p {
+        padding-left: 0px;
+    }
+
+    #nav .navbar-collapse {
+        height: 100vh;
+    }
+
+    #nav .navbar-nav .open .dropdown-menu > li > a {
+        padding-left: 66px;
+    }
+
+    /* TAMAÑO DEL BADGEDE CANTIDAD DE MENSAJES LEIDOS EN EL SUBMENU */
+    .submenu4 .badge {
+        font-size: 11px;
+    }
+
+    .product-form-group .table > thead {
+        display: none !important;
+    }
+
+    .listadoNecesidades .product-form-group .table {
+        border-bottom: 1px solid black;
+    }
+
+    .table > tbody > tr > td .data.data-tipo-participanteMOB {
+        display: block;
+    }
+
+    .table > tbody > tr > td .data.data-tipo-participanteDKT {
+        display: none;
+    }
+
+    .modal-body .datIns {
+        display: block;
+        visibility: hidden;
+    }
+
+    .table > tbody > tr > td img.hrz {
+        width: auto;
+        height: auto;
+        max-height: 50px;
+        max-width: 50px;
+    }
+
+    /* ajustes del televoto */
+    .cabeceraResultadoTelevoto {
+        max-width: 80%;
+    }
+
+    .datosPersonales .avatar {
+        /*width: 100%;*/
+        /* 2022-11-06 */
+        width: 110px;
+        border-radius: 50%;
+        border: 0px;
+    }
+
+    .datosPersonales .avatarFotoParticipante {
+        width: 100%;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .datosPersonales .avatarFotoParticipante img {
+        width: 100%;
+        /*border: 1px solid#e7e7e7;*/
+        border-radius: 50%;
+    }
+
+    .datosPersonales .avatar img {
+        height: auto;
+        width: auto;
+        /*margin-left: -10px;*/
+        margin-left: 0px;
+    }
+
+    .logotipoFichaParticipante .hrz {
+        width: 100px !important;
+        max-width: 100px !important;
+
+        height: auto !important;
+        max-height: 100% !important;
+    }
+
+    .logotipoFichaParticipante .vert {
+        height: 110px !important;
+        max-height: 110px !important;
+
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+    .logotipoFichaParticipante .square {
+        width: 110px !important;
+        max-width: 110px !important;
+
+        height: 110px !important;
+        max-height: 110px !important;
+    }
+}
