@@ -280,7 +280,7 @@ HERO
         position: absolute;
         top: 70px;
         left: 50%;
-        width: 100%;
+        width: 50%;
         z-index: -1;
         height: 200px;
         background: url('../images/fd-hero.jpg');
