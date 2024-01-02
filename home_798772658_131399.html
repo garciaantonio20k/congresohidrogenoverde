@@ -862,6 +862,7 @@
         </h3>
         <div class="row" style="margin-left:2rem;">
           <p>Take advantage of our <strong>business meetings<strong>
+                <br>
                 Once you have registered we will send you a link.
           </p>
         </div>
@@ -992,6 +993,8 @@
 
   <script defer>
     $(document).ready(function () {
+      let idioma = document.getElementById('id_idioma');
+      idioma !== null ? idioma.style.display = 'none' : '';
       /* slider hoteles */
       /*
       $('.slick-hoteles').slick({
