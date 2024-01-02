@@ -266,7 +266,7 @@ HERO
 
 @media (min-width: 992px) {
     .bl-hero {
-        min-height: 760px;
+        /*min-height: 760px;*/
     }
 }
 
