@@ -365,7 +365,7 @@ Newsletter
 
 .fila-texto-larga {
     text-transform: uppercase;
-    font-size: clamp(0.6rem, 1vw, 1rem);
+    /*    font-size: clamp(0.6rem, 1vw, 1rem);*/
     white-space: no-wrap;
 }
 
