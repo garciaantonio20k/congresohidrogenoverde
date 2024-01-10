@@ -420,7 +420,7 @@ Newsletter
 
     .fila-texto {
         text-transform: uppercase;
-        font-size: clamp(0.6rem, 1vw, 1rem);
+        font-size: 0.3rem;
         white-space: wrap;
         vertical-align: top;
     }
@@ -428,19 +428,19 @@ Newsletter
     .fila-texto-larga {
         vertical-align: top;
         text-transform: uppercase;
-        font-size: clamp(0.6rem, 1vw, 1rem);
+        font-size: 0.3rem;
         white-space: no-wrap;
     }
 
     .fila-ubicacion {
         text-transform: uppercase;
-        font-size: clamp(0.6rem, 1vw, 1rem);
+        font-size: 0.3rem;
         white-space: wrap;
     }
 
     .fila-ubicacion-larga {
         text-align: right;
-        font-size: 0.5rem;
+        font-size: 0.3rem;
         white-space: wrap;
         text-wrap: nowrap;
     }
