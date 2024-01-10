@@ -341,7 +341,7 @@ Newsletter
 
 .fila-ubicacion-larga {
     text-align: right;
-    font-size: clamp(0.2rem, 1vw, 0.8rem);
+    font-size: 0.5rem;
     white-space: wrap;
 }
 
@@ -350,6 +350,7 @@ Newsletter
     color: var(--fondo-verde);
     background-color: #fff;
     text-align: center;
+
 }
 
 .borde-azul-alto {
@@ -390,15 +391,42 @@ Newsletter
     white-space: no-wrap;
 }
 
+.bloque1 {
+    background-color: #ED9D6A;
+}
+
+.bloque2 {
+    background-color: #B6A7F3;
+}
+
+.bloque3 {
+    background-color: #F68EA1;
+}
+
+.bloque4 {
+    background-color: #5AB0F1;
+}
+
+.bloque5 {
+    background-color: #A3CF70;
+}
+
 /* moviles */
 @media (width < 600px) {
+    .fila-icono {
+        vertical-align: top;
+        width: 24px;
+    }
+
     .fila-texto {
         text-transform: uppercase;
         font-size: clamp(0.6rem, 1vw, 1rem);
         white-space: wrap;
+        vertical-align: top;
     }
 
     .fila-texto-larga {
+        vertical-align: top;
         text-transform: uppercase;
         font-size: clamp(0.6rem, 1vw, 1rem);
         white-space: no-wrap;
@@ -412,29 +440,15 @@ Newsletter
 
     .fila-ubicacion-larga {
         text-align: right;
-        font-size: clamp(0.2rem, 1vw, 0.5rem);
+        font-size: 0.5rem;
         white-space: wrap;
-        width: 100px;
+        text-wrap: nowrap;
     }
 }
 
-
- .bloque1 {
-        background-color: #ED9D6A;
-      }
-
-      .bloque2 {
-        background-color: #B6A7F3;
-      }
-
-      .bloque3 {
-        background-color: #F68EA1;
-      }
-
-      .bloque4 {
-        background-color: #5AB0F1;
-      }
-
-      .bloque5 {
-        background-color: #A3CF70;
-      }
+@media (width < 768px) {
+    .fila-icono {
+        vertical-align: top;
+        width: 32px;
+    }
+}
