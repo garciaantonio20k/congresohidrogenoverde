@@ -170,10 +170,6 @@ Newsletter
         color: var(--boton-letra-azul);
     }
 
-    .tabla-programa .horario {
-        text-align: left;
-        font-size: 1em;
-    }
 
     .navbar .nav-item .nav-link {
         background-color: var(--boton-fondo-azul);
@@ -285,13 +281,22 @@ Newsletter
 }
 
 .tabla-programa {
-    width: 100%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.tabla-programa .horario {
+    text-align: left;
+}
+
+.tabla-programa .fila-tipo {
+    text-transform: uppercase;
 }
 
 .tabla-programa td {
     padding: 5px;
     vertical-align: top;
-    /*border: 1px solid blue;*/
+    border-bottom: 1px solid #ccc;
 }
 
 .tabla-programa img {
@@ -302,51 +307,24 @@ Newsletter
     border-bottom: 1px solid #fff;
 }
 
-.fila-hora {
-    font-size: clamp(0.5rem, 1vw, 1rem);
-    font-family: lexend, monospace;
-}
-
-.fila-icono {
-    width: 32px;
-    padding: 0 5px;
-    color: white;
-}
-
-.fila-tipo {
-    text-transform: uppercase;
-    font-size: clamp(0.5rem, 1vw, 1rem);
-    white-space: nowrap;
-}
-
-.fila-texto {
-    text-transform: uppercase;
-    font-size: clamp(0.6rem, 1vw, 1rem);
-    white-space: nowrap;
-}
-
-
 .fila-texto-azul {
     text-transform: uppercase;
-    font-size: clamp(0.5rem, 1vw, 1rem);
     white-space: nowrap;
     color: #0738BB;
 }
 
 .fila-ubicacion {
     text-align: right;
-    font-size: clamp(0.2rem, 1vw, 0.8rem);
     white-space: nowrap;
 }
 
 .fila-ubicacion-larga {
     text-align: right;
-    font-size: 0.5rem;
     white-space: wrap;
+    font-size: 0.5rem;
 }
 
 .fila-bloque {
-    font-size: 1rem;
     color: var(--fondo-verde);
     background-color: #fff;
     text-align: center;
@@ -393,7 +371,7 @@ Newsletter
 
 .bloque1 {
     background-color: #ED9D6A;
-
+    color: black;
 }
 
 .bloque2 {
@@ -403,54 +381,66 @@ Newsletter
 
 .bloque3 {
     background-color: #F68EA1;
+    color: black;
 }
 
 .bloque4 {
     background-color: #5AB0F1;
+    color: black;
 }
 
 .bloque5 {
     background-color: #A3CF70;
+    color: black;
 }
 
 /* moviles */
 @media (width < 600px) {
-    .fila-icono {
-        vertical-align: top;
-        width: 24px;
+    .tabla-programa td {
+        font-size: 0.5rem;
     }
 
-    .fila-texto {
+    .tabla-programa .fila-hora {
+        vertical-align: top;
+    }
+
+    .tabla-programa .fila-icono {
+        vertical-align: top;
+    }
+
+    .tabla-programa .fila-icono img {
+        width: 0.8rem;
+        vertical-align: top;
+    }
+
+
+    .tabla-programa .fila-tipo {
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .tabla-programa .fila-texto {
         text-transform: uppercase;
-        font-size: 0.3rem;
         white-space: wrap;
         vertical-align: top;
+        text-align: left;
     }
 
-    .fila-texto-larga {
+    .tabla-programa .fila-texto-larga {
         vertical-align: top;
         text-transform: uppercase;
-        font-size: 0.3rem;
         white-space: no-wrap;
     }
 
-    .fila-ubicacion {
+    .tabla-programa .fila-ubicacion {
         text-transform: uppercase;
-        font-size: 0.3rem;
         white-space: wrap;
     }
 
-    .fila-ubicacion-larga {
+    .tabla-programa .fila-ubicacion-larga {
         text-align: right;
-        font-size: 0.3rem;
         white-space: wrap;
         text-wrap: nowrap;
-    }
-}
-
-@media (width < 768px) {
-    .fila-icono {
-        vertical-align: top;
-        width: 32px;
+        font-size: 0.4rem;
     }
 }
