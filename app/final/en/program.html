@@ -37,6 +37,14 @@
         margin-top: 1rem;
       }
 
+      .contenedor-programa .tabla-programa {
+        width: 100%;
+      }
+
+      .contenedor-programa .tabla-programa tr {
+        border-bottom: 1px solid #ccc;
+      }
+
       .contenedor-programa h2 {
         color: white;
         background-color: #62832f;
@@ -67,6 +75,7 @@
         font-size: 10px;
         vertical-align: top;
         padding-right: 5px;
+        width: 40px;
       }
 
       .fila-icono {}
@@ -94,12 +103,15 @@
       }
 
       .fila-ubicacion {
+        vertical-align: top;
         font-size: 0.8rem;
         text-align: right;
       }
 
       .fila-ubicacion-larga {
+        vertical-align: top;
         font-size: 0.8rem;
+        text-align: right;
       }
 
       .ponentes {
@@ -300,7 +312,7 @@
                     <tr>
                       <td class="fila-hora">13:10H</td>
                       <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 2.
+                      <td class="fila-tipo">TABLE 2.<br>
                         <img
                           src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo_santander.png?"
                           alt="Santander" style="width:64px">
@@ -364,7 +376,7 @@
                       <tr>
                         <td class="fila-hora">09:15H</td>
                         <td class="fila-icono"></td>
-                        <td class="fila-tipo">PLENARY
+                        <td class="fila-tipo">PLENARY<br>
                           <img alt="Cepsa"
                             src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-cepsa.png"
                             style="width:64px">
@@ -400,7 +412,7 @@
                       <tr>
                         <td class="fila-hora">11:30H</td>
                         <td class="fila-icono"></td>
-                        <td class="fila-tipo">PLENARY
+                        <td class="fila-tipo">PLENARY<br>
                           <img
                             src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-enagas-peq.png"
                             style="width:100%;min-width: 32px; max-width:32px;vertical-align: middle;margin-left: 1rem;"
@@ -465,7 +477,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                  <a data-parent="#accordion" class="color-blanco" data-toggle="collapse" href="#collapse3">
                     Friday 9 February
                   </a>
                 </h4>
@@ -480,7 +492,7 @@
                       <tr>
                         <td class="fila-hora">09:15H</td>
                         <td class="fila-icono"></td>
-                        <td class="fila-tipo">PLENARY
+                        <td class="fila-tipo">PLENARY<br>
                           <img
                             src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-siemens-app.png"
                             alt="Siemens Energy" style="width: 64px;">
@@ -526,7 +538,7 @@
                         <td class="fila-hora">12:30H</td>
                         <td class="fila-icono"></td>
                         <td class="fila-tipo">
-                          TABLE 9.
+                          TABLE 9.<br>
                           <img alt="La Caixa"
                             src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-caixa.png?"
                             style="width:64px">
@@ -626,9 +638,10 @@
                       </tr>
                       <tr>
                         <td class="fila-hora">14:00H</td>
-                        <td class="fila-icono"><img
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                            alt=""></td>
+                        <td class="fila-icono">
+                          <img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg">
+                        </td>
                         <td class="fila-texto-azul">networking / COCKTAIL LUNCH</td>
                         <td class="fila-ubicacion">Exhibition Area</td>
                       </tr>
@@ -640,7 +653,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion-paralelo" href="#collapsep2">
+                  <a data-parent="#accordion-paralelo" class="color-blanco" data-toggle="collapse" href="#collapsep2">
                     Thursday 8 February
                   </a>
                 </h4>
@@ -648,85 +661,84 @@
               <div id="collapsep2" class="panel-collapse collapse">
                 <div class="panel-body">
                   <table class="tabla-programa">
-                    <tr>
-                      <td class="fila-hora">09:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">Water needs associated with the production of H2</td>
-                      <td class="fila-ubicacion">HUESA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">Experiences from the Gabitel Chair on the H2</td>
-                      <td class="fila-ubicacion">Gabitel Ingenieros</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">The digital factory</td>
-                      <td class="fila-ubicacion">YOKOGAWA IBERIA SA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">
-                        Design and integration of control system in H2 plants
-                      </td>
-                      <td class="fila-ubicacion">BASE SISTEMA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:00H</td>
-                      <td class="fila-icono"><img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="" class="img-responsive"></td>
-                      <td class="fila-texto-azul">networking / coffee</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto-larga">
-                        Challenges in processing renewable hydrogen production projects
-                      </td>
-                      <td class="fila-ubicacion">DH2 ENERGY</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">12:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">
-                        30 years H2V in Spain
-                      </td>
-                      <td class="fila-ubicacion">INTA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">12:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">H2V, Benefits and risks of an emerging market</td>
-                      <td class="fila-ubicacion">ARIEMA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">13:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto-larga">INNOVATION AND POTENTIAL OF RENEWABLE H2 IN CATALONIA
-                        FOR THE
-                        DEVELOPMENT OF COLLABORATIVE PROJECTS</td>
-                      <td class="fila-ubicacion">ARCAMON</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">13:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">ENGINEERING IN THE DESIGN OF H2V SERVICE STATIONS
-                      </td>
-                      <td class="fila-ubicacion">MASA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">14:00H</td>
-                      <td class="fila-icono"><img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="" class="img-responsive"></td>
-                      <td class="fila-texto-azul">networking / COCKTAIL LUNCH</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td class="fila-hora">09:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">Water needs associated with the production of H2</td>
+                        <td class="fila-ubicacion">HUESA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">Experiences from the Gabitel Chair on the H2</td>
+                        <td class="fila-ubicacion">Gabitel Ingenieros</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">The digital factory</td>
+                        <td class="fila-ubicacion">YOKOGAWA IBERIA SA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">Design and integration of control system in H2 plants</td>
+                        <td class="fila-ubicacion">BASE SISTEMA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:00H</td>
+                        <td class="fila-icono">
+                          <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
+                            alt="" class="img-responsive">
+                        </td>
+                        <td class="fila-texto-azul">networking / coffee</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto-larga">
+                          Challenges in processing renewable hydrogen production projects
+                        </td>
+                        <td class="fila-ubicacion">DH2 ENERGY</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">12:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">30 years H2V in Spain</td>
+                        <td class="fila-ubicacion">INTA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">12:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">H2V, Benefits and risks of an emerging market</td>
+                        <td class="fila-ubicacion">ARIEMA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">13:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto-larga">INNOVATION AND POTENTIAL OF RENEWABLE H2 IN CATALONIA
+                          FOR THE
+                          DEVELOPMENT OF COLLABORATIVE PROJECTS</td>
+                        <td class="fila-ubicacion">ARCAMON</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">13:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">ENGINEERING IN THE DESIGN OF H2V SERVICE STATIONS</td>
+                        <td class="fila-ubicacion">MASA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">14:00H</td>
+                        <td class="fila-icono">
+                          <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
+                            alt="" class="img-responsive">
+                        </td>
+                        <td class="fila-texto-azul">networking / COCKTAIL LUNCH</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -734,7 +746,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion-paralelo" href="#collapsep3">
+                  <a data-parent="#accordion-paralelo" class="color-blanco" data-toggle="collapse" href="#collapsep3">
                     Friday 9 February
                   </a>
                 </h4>
@@ -742,54 +754,55 @@
               <div id="collapsep3" class="panel-collapse collapse">
                 <div class="panel-body">
                   <table class="tabla-programa">
-                    <tr>
-                      <td class="fila-hora">09:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">
-                        The anatomy of a fitting designed for pressure H2 applications
-                      </td>
-                      <td class="fila-ubicacion">SWAGELOK</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">Without Blue, there is no Green</td>
-                      <td class="fila-ubicacion">GRUNDFOS</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">navantia seanergies</td>
-                      <td class="fila-ubicacion">NAVANTIA</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto">H2V: Compact and safe reality hydrides</td>
-                      <td class="fila-ubicacion">ACOM</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:00H</td>
-                      <td class="fila-icono"><img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="" class="img-responsive">
-                      </td>
-                      <td class="fila-texto-azul">networking / coffee</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto"></td>
-                      <td class="fila-ubicacion">SIEMENS</td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td class="fila-hora">09:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">
+                          The anatomy of a fitting designed for pressure H2 applications
+                        </td>
+                        <td class="fila-ubicacion">SWAGELOK</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">Without Blue, there is no Green</td>
+                        <td class="fila-ubicacion">GRUNDFOS</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">navantia seanergies</td>
+                        <td class="fila-ubicacion">NAVANTIA</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto">H2V: Compact and safe reality hydrides</td>
+                        <td class="fila-ubicacion">ACOM</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:00H</td>
+                        <td class="fila-icono"><img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
+                            alt="" class="img-responsive">
+                        </td>
+                        <td class="fila-texto-azul">networking / coffee</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto"></td>
+                        <td class="fila-ubicacion">SIEMENS</td>
+                      </tr>
 
-                    <tr>
-                      <td class="fila-hora">14:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto-azul">CLOSING ACT</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
+                      <tr>
+                        <td class="fila-hora">14:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto-azul">CLOSING ACT</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
