@@ -22,72 +22,49 @@
   <!-- este container susituye main_wrap -->
   <div class="container" style="border:1px solid blue;">
     <!-- copiar desde aqui -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
-
-    <style>
-      .contenedor {
-        font-family: lexend, Arial, Helvetica, sans-serif;
+      .contenedor-programa {
+        font-family: 'Lexend', Arial, Helvetica, sans-serif;
         font-size: 1rem;
         color: black;
         background: #95C154;
         border-radius: 1rem;
         padding: 1rem;
+        margin-top: 1rem;
       }
 
-      .contenedor h2 {
-        color: #0040A7;
+      .contenedor-programa h2 {
+        color: white;
+        background-color: #62832f;
         text-align: center;
-        margin-bottom: 3rem;
         font-size: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
       }
 
-      .tabla-programa {}
-
-      .tabla-programa td {
-        vertical-align: top;
-        padding-bottom: 0.5rem;
+      .contenedor-programa .panel-heading {
+        background: #0040A7 !important;
+        color: white !important;
+        border-bottom: 2px solid black;
       }
 
-      .tabla-programa tr {
-        border-bottom: 1px solid #b1b1b1;
-
+      .contenedor-programa .panel-heading a {
+        text-decoration: none;
       }
 
       .fila-bloque {
         background-color: #f0f0f0;
-        padding: 0.5rem 0 0.5rem 0;
         text-align: center;
         text-transform: uppercase;
-
-      }
-
-      .bloque1 {
-        background-color: #ED9D6A;
-      }
-
-      .bloque2 {
-        background-color: #B6A7F3;
-      }
-
-      .bloque3 {
-        background-color: #F68EA1;
-      }
-
-      .bloque4 {
-        background-color: #5AB0F1;
-      }
-
-      .bloque5 {
-        background-color: #A3CF70;
       }
 
       .fila-hora {
-        text-align: center;
-        font-size: 0.8rem;
+        text-align: left;
+        font-size: 10px;
         vertical-align: top;
         padding-right: 5px;
       }
@@ -95,26 +72,30 @@
       .fila-icono {}
 
       .fila-texto {
+        vertical-align: top;
         text-transform: uppercase;
       }
 
       .fila-texto-azul {
+        vertical-align: top;
         text-transform: uppercase;
         font-weight: bold;
       }
 
       .fila-tipo {
+        vertical-align: top;
         text-transform: uppercase;
         text-wrap: nowrap;
-
         font-size: 0.9rem;
       }
 
-      .fila-texto {}
+      .fila-texto {
+        vertical-align: top;
+      }
 
       .fila-ubicacion {
         font-size: 0.8rem;
-
+        text-align: right;
       }
 
       .fila-ubicacion-larga {
@@ -125,7 +106,6 @@
         background-color: #95C152;
         color: #ffffff;
         border-radius: 10px;
-
         margin-top: 1rem;
       }
 
@@ -147,7 +127,6 @@
         object-position: top;
         background: #f0f0f0;
       }
-
 
       .ponente p {
         margin: 0;
@@ -180,7 +159,6 @@
         font-size: 1.5rem;
         background-color: #EDEDED;
         padding: 1rem;
-
         margin-bottom: 0;
         margin-top: 0;
         border-bottom: 1px solid #ddd;
@@ -189,13 +167,76 @@
       .contenido {
         background-color: white;
         padding: 1rem;
+      }
 
+      .bloque1 {
+        background-color: #ED9D6A;
+        color: black;
+      }
+
+      .bloque2 {
+        background-color: #B6A7F3;
+        color: black;
+      }
+
+      .bloque3 {
+        background-color: #F68EA1;
+        color: black;
+      }
+
+      .bloque4 {
+        background-color: #5AB0F1;
+        color: black;
+      }
+
+      .bloque5 {
+        background-color: #A3CF70;
+        color: black;
+      }
+
+      .charla {
+        border-bottom: 1px solid #ccc;
+        padding: 1rem 0;
+      }
+
+      .charla img {
+        vertical-align: middle;
+      }
+
+      .charla .hora {
+        font-size: 1rem;
+      }
+
+      .charla-texto-unico {
+        padding: 0.5rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .charla-titulo {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .charla-ponentes {
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .bloque {
+        padding: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .color-blanco {
+        color: white !important;
       }
     </style>
-
-
-
-    <div class="contenedor">
+    <div class="contenedor-programa">
       <div class="row">
         <div class="col-xs-12">
           <h2>Main Program</h2>
@@ -203,12 +244,12 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  <a data-parent="#accordion" class="color-blanco" data-toggle="collapse" href="#collapse1">
                     Wednesday 7 February
                   </a>
                 </h4>
               </div>
-              <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-collapse collapse in" id="collapse1">
                 <div class="panel-body">
                   <table class="tabla-programa">
                     <tr>
@@ -245,11 +286,9 @@
                       <td class="fila-icono"></td>
                       <td class="fila-tipo">TABLE 1.</td>
                       <td class="fila-texto">Resources for GH2 Production</td>
-                      <td class="fila-ubicacion-larga">TELAM Partners (Bloom Energy) / Ariema / Appa Renovables /
-                        Veolia
-                        /
-                        UE /
-                        Grundfos</td>
+                      <td class="fila-ubicacion-larga">
+                        TELAM Partners (Bloom Energy) / Ariema / Appa Renovables / Veolia / UE / Grundfos
+                      </td>
                     </tr>
                     <tr>
                       <td class="fila-hora">12:50H</td>
@@ -303,7 +342,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  <a data-parent="#accordion" class="color-blanco" data-toggle="collapse" href="#collapse2">
                     Thursday 8 February
                   </a>
                 </h4>
@@ -311,108 +350,113 @@
               <div id="collapse2" class="panel-collapse collapse">
                 <div class="panel-body">
                   <table class="tabla-programa">
-                    <tr>
-                      <td colspan="5" class="fila-bloque bloque3">BLOCK 3 &#9472; INDUSTRY</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">SPEECH 1.</td>
-                      <td class="fila-texto">Safety in GH2 handling</td>
-                      <td class="fila-ubicacion">Dekra</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:15H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PLENARY <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-cepsa.png"
-                          style="width:100%;min-width: 32px; max-width:48px;vertical-align: middle;margin-left:1rem;"
-                          alt=""></td>
-                      <td class="fila-texto">HUELVA AND ALGECIRAS PROJECT DEVELOPMENT.
-                      </td>
-                      <td class="fila-ubicacion"></td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:45H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PANEL 3.</td>
-                      <td class="fila-texto">GH2 IN NH3 PRODUCTION.</td>
-                      <td class="fila-ubicacion">Fertiberia</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:05H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 4.</td>
-                      <td class="fila-texto">GH2 IN THERMAL PROJECTS.</td>
-                      <td class="fila-ubicacion-larga">Cemex / Atlantic Copper / Anffecc</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:00H</td>
-                      <td class="fila-icono"><img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="">
-                      </td>
-                      <td class="fila-texto-azul" colspan="2">networking / coffe</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PLENARY <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-enagas-peq.png"
-                          style="width:100%;min-width: 32px; max-width:32px;vertical-align: middle;margin-left: 1rem;"
-                          alt=""></td>
-                      <td class="fila-texto">H2MED PROJECT DEVELOPMENT.</td>
-                      <td class="fila-ubicacion"></td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">12:00H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 5.</td>
-                      <td class="fila-texto">STRATEGIC STORAGE AND LOGISTICS OF H2.</td>
-                      <td class="fila-ubicacion">Sedigas / Trinity / Exolum</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">12:15H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PANEL 4.</td>
-                      <td class="fila-texto">AUXILIARY INDUSTRY.</td>
-                      <td class="fila-ubicacion">Masa</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">13:10H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 6.</td>
-                      <td class="fila-texto">VALUE CHAIN GENERATED.</td>
-                      <td class="fila-ubicacion-larga">Calvera / Hiperbaric / Ajusa</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">14:00H</td>
-                      <td class="fila-icono"><img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="">
-                      </td>
-                      <td class="fila-texto-azul" colspan="2">networking / COCKTAIL LUNCH</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
-                    <tr>
-                      <td colspan="5" class="fila-bloque bloque4">BLOCK 4 &#9472; SOCIETY</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">15:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PANEL 5.</td>
-                      <td class="fila-texto">IMAGE OF GH2 IN SOCIETY AND RRSS</td>
-                      <td class="fila-ubicacion"></td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">16:10H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 7.</td>
-                      <td class="fila-texto">hydrogen valleys</td>
-                      <td class="fila-ubicacion-larga">Catalonia / Basque Country / Andalusia / Alicante</td>
-                    </tr>
-
+                    <tbody>
+                      <tr>
+                        <td colspan="5" class="fila-bloque bloque3">BLOCK 3 &#9472; INDUSTRY</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">SPEECH 1.</td>
+                        <td class="fila-texto">Safety in GH2 handling</td>
+                        <td class="fila-ubicacion">Dekra</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:15H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PLENARY
+                          <img alt="Cepsa"
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-cepsa.png"
+                            style="width:64px">
+                        </td>
+                        <td class="fila-texto">
+                          HUELVA AND ALGECIRAS PROJECT DEVELOPMENT.
+                        </td>
+                        <td class="fila-ubicacion"></td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:45H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PANEL 3.</td>
+                        <td class="fila-texto">GH2 IN NH3 PRODUCTION.</td>
+                        <td class="fila-ubicacion">Fertiberia</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:05H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">TABLE 4.</td>
+                        <td class="fila-texto">GH2 IN THERMAL PROJECTS.</td>
+                        <td class="fila-ubicacion-larga">Cemex / Atlantic Copper / Anffecc</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:00H</td>
+                        <td class="fila-icono">
+                          <img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg">
+                        </td>
+                        <td class="fila-texto-azul" colspan="2">networking / coffe</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PLENARY
+                          <img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-enagas-peq.png"
+                            style="width:100%;min-width: 32px; max-width:32px;vertical-align: middle;margin-left: 1rem;"
+                            alt="">
+                        </td>
+                        <td class="fila-texto">H2MED PROJECT DEVELOPMENT.</td>
+                        <td class="fila-ubicacion"></td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">12:00H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">TABLE 5.</td>
+                        <td class="fila-texto">STRATEGIC STORAGE AND LOGISTICS OF H2.</td>
+                        <td class="fila-ubicacion">Sedigas / Trinity / Exolum</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">12:15H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PANEL 4.</td>
+                        <td class="fila-texto">AUXILIARY INDUSTRY.</td>
+                        <td class="fila-ubicacion">Masa</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">13:10H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">TABLE 6.</td>
+                        <td class="fila-texto">VALUE CHAIN GENERATED.</td>
+                        <td class="fila-ubicacion-larga">Calvera / Hiperbaric / Ajusa</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">14:00H</td>
+                        <td class="fila-icono">
+                          <img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg">
+                        </td>
+                        <td class="fila-texto-azul" colspan="2">networking / COCKTAIL LUNCH</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                      <tr>
+                        <td colspan="5" class="fila-bloque bloque4">BLOCK 4 &#9472; SOCIETY</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">15:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PANEL 5.</td>
+                        <td class="fila-texto">IMAGE OF GH2 IN SOCIETY AND RRSS</td>
+                        <td class="fila-ubicacion"></td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">16:10H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">TABLE 7.</td>
+                        <td class="fila-texto">hydrogen valleys</td>
+                        <td class="fila-ubicacion-larga">Catalonia / Basque Country / Andalusia / Alicante</td>
+                      </tr>
+                    </tbody>
                   </table>
 
                 </div>
@@ -429,76 +473,79 @@
               <div id="collapse3" class="panel-collapse collapse">
                 <div class="panel-body">
                   <table class="tabla-programa">
-                    <tr>
-                      <td colspan="5" class="fila-bloque bloque5 ">BLOCK 5 &#9472; Transport, Movility, Formation</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">09:15H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">PLENARY
-                        <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-siemens.png"
-                          alt="Siemens Energy" style="width: 64px;">
-                      </td>
-                      <td class="fila-texto">siemens energy talk
+                    <tbody>
+                      <tr>
+                        <td colspan="5" class="fila-bloque bloque5 ">BLOCK 5 &#9472; Transport, Movility, Formation</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">09:15H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">PLENARY
+                          <img
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-siemens-app.png"
+                            alt="Siemens Energy" style="width: 64px;">
+                        </td>
+                        <td class="fila-texto">siemens energy talk
 
-                      </td>
-                      <td class="fila-ubicacion-larga">Port of Rotterdam / Port of Huelva / EDP / Consejería of
-                        Industry, Energy and Mines of J.A.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">10:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">panel 6.</td>
-                      <td class="fila-texto">green methanol</td>
-                      <td class="fila-ubicacion">MAERSK</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:00H</td>
-                      <td class="fila-icono">
-                        <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                          alt="Networking" style="width:24px">
-                      </td>
-                      <td class="fila-texto-azul" colspan="2">networking / coffee</td>
-                      <td class="fila-ubicacion">Exhibition Area</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">11:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 8.</td>
-                      <td class="fila-texto">GH2 in Mobility</td>
-                      <td class="fila-ubicacion">Damas / Balearia / ALA / Ferroviaria</td>
-                    </tr>
-                    <tr>
-                      <td class="fila-hora">12:15H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">SPEECH 2.</td>
-                      <td class="fila-texto">Training and Talent</td>
-                      <td class="fila-ubicacion">Atlantic Copper</td>
-                    </tr>
-                    <tr class="borde-azul-alto">
-                      <td class="fila-hora">12:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-tipo">TABLE 9.
-                        <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-caixa.png?"
-                          alt="La Caixa" style="width:64px">
-                      </td>
-                      <td class="fila-texto">Caixa</td>
-                      <td class="fila-ubicacion"></td>
-                    </tr>
-                    <tr class="borde-azul-alto">
-                      <td class="fila-hora">13:15H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto" colspan="2">EXECUTIVE SUMMARY</td>
-                      <td class="fila-ubicacion">President Technical Committe</td>
-                    </tr>
-                    <tr class="borde-azul-bajo">
-                      <td class="fila-hora">13:30H</td>
-                      <td class="fila-icono"></td>
-                      <td class="fila-texto" colspan="3">CLOSING ACT</td>
-                    </tr>
+                        </td>
+                        <td class="fila-ubicacion-larga">Port of Rotterdam / Port of Huelva / EDP / Consejería of
+                          Industry, Energy and Mines of J.A.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">10:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">panel 6.</td>
+                        <td class="fila-texto">green methanol</td>
+                        <td class="fila-ubicacion">MAERSK</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:00H</td>
+                        <td class="fila-icono">
+                          <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
+                            alt="Networking" style="width:24px">
+                        </td>
+                        <td class="fila-texto-azul" colspan="2">networking / coffee</td>
+                        <td class="fila-ubicacion">Exhibition Area</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">11:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">TABLE 8.</td>
+                        <td class="fila-texto">GH2 in Mobility</td>
+                        <td class="fila-ubicacion">Damas / Balearia / ALA / Ferroviaria</td>
+                      </tr>
+                      <tr>
+                        <td class="fila-hora">12:15H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">SPEECH 2.</td>
+                        <td class="fila-texto">Training and Talent</td>
+                        <td class="fila-ubicacion">Atlantic Copper</td>
+                      </tr>
+                      <tr class="borde-azul-alto">
+                        <td class="fila-hora">12:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-tipo">
+                          TABLE 9.
+                          <img alt="La Caixa"
+                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-caixa.png?"
+                            style="width:64px">
+                        </td>
+                        <td class="fila-texto">Caixa</td>
+                        <td class="fila-ubicacion"></td>
+                      </tr>
+                      <tr class="borde-azul-alto">
+                        <td class="fila-hora">13:15H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto" colspan="2">EXECUTIVE SUMMARY</td>
+                        <td class="fila-ubicacion">President Technical Committe</td>
+                      </tr>
+                      <tr class="borde-azul-bajo">
+                        <td class="fila-hora">13:30H</td>
+                        <td class="fila-icono"></td>
+                        <td class="fila-texto" colspan="3">CLOSING ACT</td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -511,20 +558,21 @@
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
-                  <a data-toggle="collapse" data-parent="#accordion-paralelo" href="#collapsep1">
+                  <a data-parent="#accordion-paralelo" class="color-blanco" data-toggle="collapse" href="#collapsep1">
                     Wednesday 7 February
                   </a>
                 </h4>
               </div>
-              <div id="collapsep1" class="panel-collapse collapse in">
+              <div class="panel-collapse collapse in" id="collapsep1">
                 <div class="panel-body">
                   <table class="tabla-programa">
                     <tbody>
                       <tr>
                         <td class="fila-hora">09:00H</td>
-                        <td class="fila-icono"><img
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-handshake.svg"
-                            alt=""></td>
+                        <td class="fila-icono">
+                          <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-handshake.svg"
+                            alt="">
+                        </td>
                         <td class="fila-texto">WELCOME DESK</td>
                         <td class="fila-ubicacion">Chimeneas Room</td>
                       </tr>
@@ -742,6 +790,7 @@
                       <td class="fila-texto-azul">CLOSING ACT</td>
                       <td class="fila-ubicacion">Exhibition Area</td>
                     </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -1377,23 +1426,8 @@
             </div>
             <div class="col-xs-12 ponente">
               <p>
-                Maarten Wetselaar<br />
+                Maarten Wetselaar<br>
                 <small>CEO Cepsa</small>
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-6 text-center">
-            <div class="col-xs-12 ponente-imagen">
-              <a href="https://www.linkedin.com/in/ignacio-alvarez-ossorio-ramos-60077027/" target="_blank">
-                <img
-                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/ignacio_alvarez-ossorio-ramos.jpg"
-                  alt="Ignacio Alvarez-Ossorio Ramos" class="img-responsive">
-              </a>
-            </div>
-            <div class="col-xs-12 ponente">
-              <p>
-                Ignacio Álvarez-Ossorio Ramos<br>
-                <small>General Director APH</small>
               </p>
             </div>
           </div>
@@ -1535,6 +1569,25 @@
             </div>
           </div>
         </div><!-- fin row -->
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/ignacio-alvarez-ossorio-ramos-60077027/" target="_blank">
+                <img
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/ignacio_alvarez-ossorio-ramos.jpg"
+                  alt="Ignacio Alvarez-Ossorio Ramos" class="img-responsive">
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Ignacio &Aacute;lvarez-Ossorio Ramos<br>
+                <small>Director General APH</small>
+              </p>
+            </div>
+          </div>
+          <!-- espacio para otro ponente -->
+        </div> <!-- fin row -->
       </div> <!-- fin ponentes principales -->
 
       <h2>Paralel Speakers</h2>
@@ -1605,24 +1658,6 @@
               </p>
             </div>
           </div>
-          <div class="col-xs-6 text-center">
-            <div class="col-xs-12 ponente-imagen">
-              <a href="https://www.linkedin.com/in/victor-hugo-corcho-fernandez-20133528/" target="_blank">
-                <img
-                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/05_Victor_Hugo_Corcho_Fernandez_CLANTECH.jpg"
-                  alt="Victor Hugo Corcho Fernández" class="img-responsive">
-              </a>
-            </div>
-
-            <div class="col-xs-12 ponente">
-              <p>
-                Victor Hugo Corcho Fernández<br>
-                <small>Engineering and Projects Manager at
-                  CLANTECH</small>
-              </p>
-            </div>
-          </div>
-
         </div><!-- fin row -->
         <!-- jueves -->
         <div class="row">
@@ -1865,13 +1900,28 @@
               </p>
             </div>
           </div>
+        </div><!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/victor-hugo-corcho-fernandez-20133528/" target="_blank">
+                <img
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/05_Victor_Hugo_Corcho_Fernandez_CLANTECH.jpg"
+                  alt="Victor Hugo Corcho Fernández" class="img-responsive">
+              </a>
+            </div>
+
+            <div class="col-xs-12 ponente">
+              <p>
+                Victor Hugo Corcho Fernández<br>
+                <small>Engineering and Projects Manager at
+                  CLANTECH</small>
+              </p>
+            </div>
+          </div>
         </div>
-
       </div> <!-- fin ponentes-paralelo -->
-
-
-    </div><!-- fin contenedor -->
-
+    </div> <!-- fin contenedor-programa -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"
       integrity="sha512-ju6u+4bPX50JQmgU97YOGAXmRMrD9as4LE05PdC3qycsGQmjGlfm041azyB1VfCXpkpt1i9gqXCT6XuxhBJtKg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1881,16 +1931,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"
       integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script defer>
-      $(document).ready(function () {
-        //$("#acordeon-principal").accordion();
-        //$("#acordeon-paralelo").accordion();
-      });
-    </script>
-
     <!-- copiar hasta aqui -->
-  </div><!-- CONTENEDOR AZUL -->
+  </div> <!-- fin container main-wrap -->
 </body>
 
 </html>
