@@ -1,0 +1,28 @@
+.contenedor {
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-family: lexend, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0040A7 !important;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+#piePagina {
+    margin-top: 1rem !important;
+}
