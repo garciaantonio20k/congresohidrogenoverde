@@ -296,7 +296,8 @@ Newsletter
 .tabla-programa td {
     padding: 5px;
     vertical-align: top;
-    border-bottom: 1px solid #ccc;
+
+    text-transform: uppercase;
 }
 
 .tabla-programa img {
@@ -321,7 +322,7 @@ Newsletter
 .fila-ubicacion-larga {
     text-align: right;
     white-space: wrap;
-    font-size: 0.5rem;
+
 }
 
 .fila-bloque {
@@ -443,4 +444,15 @@ Newsletter
         text-wrap: nowrap;
         font-size: 0.4rem;
     }
+}
+
+.fila-texto {
+    text-transform: uppercase;
+}
+
+.table .fila-tipo {}
+
+.table .fila-tipo {
+    width: 100px;
+    text-transform: uppercase;
 }
