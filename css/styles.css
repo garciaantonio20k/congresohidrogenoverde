@@ -455,3 +455,27 @@ Newsletter
     width: 100px;
     text-transform: uppercase;
 }
+
+.programa-datos {
+    color: #212529;
+    font-family: Lexend;
+}
+
+.programa-datos .seccion {
+    background-color: var(--boton-letra-azul);
+    color: white;
+    text-transform: uppercase;
+}
+
+.programa-datos .borde-inferior {
+    border-bottom: 1px solid rgb(12, 54, 12);
+}
+
+.programa-datos .titulo {
+    font-weight: bold;
+    vertical-align: baseline;
+}
+
+.programa-datos .moderador {
+    color: rgb(12, 54, 12);
+}
