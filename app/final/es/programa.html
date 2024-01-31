@@ -188,6 +188,10 @@
         padding: 1rem;
       }
 
+      .bloque {
+        text-transform: uppercase;
+      }
+
       .bloque1 {
         background-color: #ED9D6A;
         color: black;
@@ -261,26 +265,31 @@
 
       }
 
-      .container-descarga {
+      .contenedor-programa .contenedor-descarga {
+        margin-bottom: 1rem;
+        background-color: #62832f;
         color: white;
-        background-color: #465e22;
-        border: 1px solid #bad68f;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0 0 1rem auto;
       }
 
-      .contenedor-programa .descarga {
-        color: black;
+      .contenedor-programa .enlace-descarga {
+        color: white;
       }
     </style>
     <div class="contenedor-programa">
       <div class="row">
         <div class="col-xs-12">
-          <h2>Programa Principal</h2>
-          <h3 class="mb-2 bordes-redondos container-descarga">
-            <a href="" class="descarga">Descargar en PDF <img
-                src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/file-pdf.svg"
-                style="color: white;" alt=""></a>
-          </h3>
-
+          <h2>Programa Principal </h2>
+          <a href="" class="enlace-descarga">
+            <div class="contenedor-descarga">
+              Descargar en PDF
+              <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/icono-pdf.png"
+                style="height: 16px;">
+            </div>
+          </a>
           <div class="panel-group" id="accordion">
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -296,7 +305,8 @@
 
                   <div class="row charla">
                     <div class="col-xs-6 text-left hora"> <img
-                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 9:00</div>
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 9:00
+                    </div>
                     <div class="col-xs-6 text-right">
                       <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
                       Salon Chimenea
@@ -322,48 +332,51 @@
                         src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 11:00
                     </div>
                     <div class="col-xs-6 text-right"><img
-                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg"> Zona
-                      Expositiva</div>
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                      Zona Expositiva
+                    </div>
                     <div class="col-xs-12 text-center charla-texto-unico">
                       networking / coffe
                     </div>
                   </div>
+
                   <div class="row bloque bloque1">
-                    BLOQUE 1 - Tecnolog&iacute;as / Recursos
+                    TECNOLOGÍAS / RECURSOS
                   </div>
 
                   <div class="row charla">
-                    <div class="col-xs-6 text-left">
-                      <div class=""> <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 11:30
+                    <div class="col-xs-4 text-left">
+                      <div class="">
+                        <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        11:45
                       </div>
                       <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
-                        MESA 1.</div>
-                    </div>
-                    <div class="col-xs-6 text-right">
-                      <div class="charla-titulo">
-                        recursos para la producci&oacute;n del h2v
+                        MESA 1.
                       </div>
-                      <div class="charla-ponentes">
-                        TELAM Partners (Bloom Energy) / Ariema / Appa Renovables / Veolia / UE / Grundfos
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        RECURSOS PARA LA PRODUCCIÓN DEL H2V
                       </div>
                     </div>
                   </div>
 
                   <div class="row charla">
-                    <div class="col-xs-6 text-left">
+                    <div class="col-xs-4 text-left">
                       <div class=""> <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 12:50
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        12:50
                       </div>
                       <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
                         PANEL 1.</div>
                     </div>
-                    <div class="col-xs-6 text-right">
+                    <div class="col-xs-8 text-right">
                       <div class="charla-titulo">
-                        IA aplicadas a las tecnolog&iacute;as del h2v
+                        IA APLICADA A LAS TECNOLOGÍAS DEL H2V
                       </div>
                       <div class="charla-ponentes">
-
+                        <strong>José Manuel Andújar Márquez</strong><br>
+                        Director CITES
                       </div>
                     </div>
                   </div>
@@ -380,38 +393,81 @@
                           class="img-responsive" width="64px">
                       </div>
                     </div>
-                    <div class="col-xs-2 text-center">
-
-                    </div>
-                    <div class="col-xs-6 text-right">
+                    <div class="col-xs-8 text-right">
                       <div class="charla-titulo">
-                        Financiaci&oacute;n proyectos de h2v
-
+                        FINANCIACIÓN PROYECTO H2V
                       </div>
                       <div class="charla-ponentes">
-                        Santander / Cesce / BEI
                       </div>
                     </div>
                   </div>
 
                   <div class="row charla">
                     <div class="col-xs-6 text-left hora"> <img
-                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 14:00
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                      14:00
                     </div>
                     <div class="col-xs-6 text-right"><img
-                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg"> Zona
-                      Expositiva</div>
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                      Zona Expositiva
+                    </div>
                     <div class="col-xs-12 text-center charla-texto-unico">
                       networking / almuerzo cocktail
                     </div>
                   </div>
-                  <div class="row bloque bloque2">
-                    BLOQUE 2 - Contexto administrativo
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        15:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        SPEECH 1
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        AGUA, TRANSICIÓN ENERGÉTICA Y DESARROLLO TERRITORIAL
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Manuel Cermerón Romero</strong><br>
+                        Chief Executive Officer en Veolia España
+                      </div>
+                    </div>
                   </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        15:45
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        SPEECH 2
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        ELECTROLIZADORES: 30 AÑOS DE EXPERIENCIA EN ESPAÑA
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Rafael Luque Berruezo</strong><br>
+                        CEO Ariema
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row bloque bloque2">
+                    Contexto administrativo
+                  </div>
+
                   <div class="row charla">
                     <div class="col-xs-6 text-left">
                       <div class=""> <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 15:30
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        16:00
                       </div>
                       <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
                         PANEL 2.</div>
@@ -421,16 +477,20 @@
                         proyectos usa vs ue
                       </div>
                       <div class="charla-ponentes">
+                        <strong>Cristina Lobillo Borrero</strong><br>
+                        Directora de la Plataforma de Energía de la Unión
+                        Europea y de las Relaciones Internacionales de la DG
                       </div>
                     </div>
                   </div>
                   <div class="row charla">
                     <div class="col-xs-6 text-left">
                       <div class=""> <img
-                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 16:00
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        16:20
                       </div>
                       <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
-                        MESA 3.</div>
+                        MESA 3</div>
                     </div>
                     <div class="col-xs-6 text-right">
                       <div class="charla-titulo">
@@ -443,6 +503,7 @@
                 </div>
               </div>
             </div>
+
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title text-center">
@@ -453,117 +514,243 @@
               </div>
               <div class="panel-collapse collapse" id="collapse2">
                 <div class="panel-body">
-                  <table class="tabla-programa">
-                    <tbody>
-                      <tr>
-                        <td class="fila-bloque bloque3" colspan="5">BLOQUE 3 - Industria</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">09:00H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">SPEECH 1.</td>
-                        <td class="fila-texto">seguridad en el manejo del h2v</td>
-                        <td class="fila-ubicacion">Dekra</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">09:15H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">plenaria<br>
-                          <img alt="Cepsa"
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-cepsa.png"
-                            style="width:64px">
-                        </td>
-                        <td class="fila-texto">
-                          desarrollo proyecto huelva y algeciras
-                        </td>
-                        <td class="fila-ubicacion"></td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">09:45H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">PANEL 3.</td>
-                        <td class="fila-texto">h2v en producci&oacute;n de nh3</td>
-                        <td class="fila-ubicacion">Fertiberia</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">10:05H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">MESA 4.</td>
-                        <td class="fila-texto">h2v en procesos t&eacute;rmicos</td>
-                        <td class="fila-ubicacion-larga">Cemex / Atlantic Copper / Anffecc</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">11:00H</td>
-                        <td class="fila-icono">
-                          <img
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg">
-                        </td>
-                        <td class="fila-texto-azul" colspan="2">networking / coffe</td>
-                        <td class="fila-ubicacion">Zona Expositiva</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">11:30H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">plenaria<br>
-                          <img alt=""
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-enagas-peq.png"
-                            style="width:100%;min-width: 32px; max-width:32px;vertical-align: middle;margin-left: 1rem;">
-                        </td>
-                        <td class="fila-texto">
-                          LOS CORREDORES DE H2: H2MED Y RED TRONCAL ESPAÑOLA DE H2
-                        <td>
-                        <td class="fila-ubicacion"></td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">12:00H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">MESA 5.</td>
-                        <td class="fila-texto">Almacenamiento estrat&eacute;gico y log&iacute;stica del h2</td>
-                        <td class="fila-ubicacion">Sedigas / Trinity / Exolum</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">12:50H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">PANEL 4.</td>
-                        <td class="fila-texto">industria auxiliar</td>
-                        <td class="fila-ubicacion">Masa</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">13:10H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">MESA 6.</td>
-                        <td class="fila-texto">cadena de valor generada</td>
-                        <td class="fila-ubicacion-larga">Calvera / Hiperbaric / Ajusa</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">14:00H</td>
-                        <td class="fila-icono">
-                          <img
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg">
-                        </td>
-                        <td class="fila-texto-azul" colspan="2">networking / almuerzo cocktail</td>
-                        <td class="fila-ubicacion">Zona Expositiva</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-bloque bloque4" colspan="5">BLOQUE 4 - Sociedad</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">15:30H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">PANEL 5.</td>
-                        <td class="fila-texto">imagen del h2v en la sociedad y las rrss</td>
-                        <td class="fila-ubicacion"></td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">16:10H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">MESA 7.</td>
-                        <td class="fila-texto">valles del hidr&oacute;geno</td>
-                        <td class="fila-ubicacion-larga">Catalu&ntilde;a / Pa&iacute;s Vasco / Puerta Europa /
-                          Andaluc&iacute;a / Alicante</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="row bloque bloque3">
+                    Industria
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        11:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        SPEECH 3
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        SEGURIDAD EN EL MANEJO DEL H2V
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>María Cabrelles Fernández</strong><br>
+                        Directora Procesos Seguridad Dekra
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        09:15
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PLENARIA 1
+                        <img alt="Cepsa"
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-cepsa.png"
+                          style="width:64px">
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        DESARROLLO PROYECTOS HUELVA Y ALGECIRAS
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        09:44
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PANEL 3
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        EL H2V EN LA PRODUCCIÓN DE AMONÍACO
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Javier Goñi del Cacho</strong><br>
+                        CEO Fertiberia
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        10:05
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 4
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        EL H2V EN PROCESOS TÉRMICOS
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left hora"> <img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                      11:00
+                    </div>
+                    <div class="col-xs-6 text-right"><img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                    </div>
+                    <div class="col-xs-12 text-center charla-texto-unico">
+                      NETWORKING / CAFÉ
+                    </div>
+                  </div>
+
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        11:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PLENARIA 2
+                        LOGO ENAGAS
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        LOS CORREDODRES DE H2: H2med y Red Troncal Española de H2
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Natalia Latorre Arranz</strong><br>
+                        Directora General de Transición Energética de Enagás<br>
+                        <strong>Jesús Manuel Gil Jiménez</strong><br>
+                        Director de H2 Enagás
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        12:00
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 5
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        ALMACENAMIENTO ESTRATÉGICO Y LOGÍSTICA DEL H2
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        12:50
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PANEL 4
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        INDUSTRIA AUXILIAR
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Francesc Suils Fuentes</strong><br>
+                        Director General Masa
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        13:10
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 6
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        CADENA DE VALOR GENERADA
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left hora"> <img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                      14:00
+                    </div>
+                    <div class="col-xs-6 text-right"><img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                      Zona Expositiva
+                    </div>
+                    <div class="col-xs-12 text-center charla-texto-unico">
+                      networking / ALMUERZO COCKTAIL
+                    </div>
+                  </div>
+
+                  <div class="row bloque bloque4">
+                    SOCIEDAD
+                  </div>
+
+                  <!-- charla simple -->
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        15:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PANEL 5
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        IMAGEN DEL H2V EN LA SOCIEDAD Y RRSS
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Deborah García Bello</strong><br>
+                        Comunicadora
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        16:10
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 7
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        VALLES DEL HIDRÓGENO
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -577,100 +764,159 @@
               </div>
               <div class="panel-collapse collapse" id="collapse3">
                 <div class="panel-body">
-                  <table class="tabla-programa">
-                    <tbody>
-                      <tr>
-                        <td class="fila-bloque bloque5" colspan="5">BLOQUE 5 - Transporte, Movilidad, Formaci&oacute;n
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">09:15H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">plenaria<br>
-                          <img
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-siemens-app.png"
-                            alt="Siemens Energy" style="width: 64px;">
-                        </td>
-                        <td class="fila-texto">
-                          siemens energy talk </td>
-                        <td class="fila-ubicacion-larga">
-                          Puerto de Rotterdam / Puerto de Huelva / EDP/Consejer&iacute;a de Industria, Energ&iacute;a y
-                          Minas J.A</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">
-                          10:30H</td>
-                        <td class="fila-icono">
-                        </td>
-                        <td class="fila-tipo">
-                          panel 6.</td>
-                        <td class="fila-texto">
-                          metanol verde</td>
-                        <td class="fila-ubicacion">
-                          MAERSK / MAN</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">
-                          11:00H</td>
-                        <td class="fila-icono">
-                          <img alt="Networking"
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-networking.svg"
-                            width="24">
-                        </td>
-                        <td class="fila-texto-azul" colspan="2">
-                          networking / coffee</td>
-                        <td class="fila-ubicacion">
-                          Zona Expositiva</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">
-                          11:30H</td>
-                        <td class="fila-icono">
-                        </td>
-                        <td class="fila-tipo">
-                          MESA 8.</td>
-                        <td class="fila-texto">
-                          h2v en la movilidad</td>
-                        <td class="fila-ubicacion">
-                          Damas / Balearia / ALA / Ferroviaria</td>
-                      </tr>
-                      <tr>
-                        <td class="fila-hora">
-                          12:15H</td>
-                        <td class="fila-icono">
-                        </td>
-                        <td class="fila-tipo">
-                          SPEECH 2.</td>
-                        <td class="fila-texto">
-                          formaci&oacute;n y talento</td>
-                        <td class="fila-ubicacion">
-                          Atlantic Copper</td>
-                      </tr>
-                      <tr class="borde-azul-alto">
-                        <td class="fila-hora">12:30H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-tipo">
-                          MESA 9.<br>
-                          <img alt="La Caixa"
-                            src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-caixa.png?"
-                            style="width:64px;">
-                        </td>
-                        <td class="fila-texto">Caixa </td>
-                        <td class="fila-ubicacion"></td>
-                      </tr>
-                      <tr class="borde-azul-alto">
-                        <td class="fila-hora">13:15H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-texto" colspan="2">RESUMEN EJECUTIVO</td>
-                        <td class="fila-ubicacion">Presidente Comit&eacute; T&eacute;cnico</td>
-                      </tr>
-                      <tr class="borde-azul-bajo">
-                        <td class="fila-hora">13:30H</td>
-                        <td class="fila-icono"></td>
-                        <td class="fila-texto" colspan="3">ACTO CLAUSURA</td>
-                      </tr>
-                    </tbody>
-                  </table>
+
+                  <div class="row bloque bloque5">
+                    TRANSPORTE / MOVILIDAD / FORMACION / INTERNACIONALIZACION
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left">
+                      <div class="">
+                        <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        09:00
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PLENARIA 3<br>
+                        <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-siemens-app.png"
+                          alt="Siemens Energy" style="width: 64px;">
+
+                      </div>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <div class="charla-titulo">
+                        SIEMENS ENERGY TALK
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left">
+                      <div class="">
+                        <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        10:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 8<br>
+                        <img alt="La Caixa"
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/logos/logo-caixa.png?"
+                          style="width:64px;">
+                      </div>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <div class="charla-titulo">
+                        H2V COMO VECTOR DE DESCARBONIZACIÓN
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left hora"> <img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg"> 11:00
+                    </div>
+                    <div class="col-xs-6 text-right"><img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                      Zona Expositiva
+                    </div>
+                    <div class="col-xs-12 text-center charla-texto-unico">
+                      networking / coffe
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        11:30
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        PANEL 6
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        METANOL VERDE
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong> Diego Perdones Montero</strong><br>
+                        Director Comercial. MAN Energy Solution España y Portugal
+                        <br>
+                        <strong>Fernando Marcos Duque</strong><br>
+                        Consejero delegado de C2X España (MAERSK)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        11:55
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        MESA 9
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        EL H2V EN LA MOVILIDAD
+                      </div>
+                      <div class="charla-ponentes"></div>
+                    </div>
+                  </div>
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class=""> <img
+                          src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        13:00
+                      </div>
+                      <div><img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-geo-alt.svg">
+                        SPEECH 4
+                      </div>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        FORMACIÓN Y TALENTO
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Macarena Gutiérrez Martínez</strong><br>
+                        Directora General Atlantic Copper
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-4 text-left">
+                      <div class="">
+                        <img src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                        13:15
+                      </div>
+
+                    </div>
+                    <div class="col-xs-8 text-right">
+                      <div class="charla-titulo">
+                        RESUMEN EJECUTIVO DEL CONGRESO
+                      </div>
+                      <div class="charla-ponentes">
+                        <strong>Francisco Montalbán Gómez</strong><br>
+                        Presidente Comité Técnico
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row charla">
+                    <div class="col-xs-6 text-left hora"> <img
+                        src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ico-clock.svg">
+                      13:30
+                    </div>
+                    <div class="col-xs-6 text-right">
+                    </div>
+                    <div class="col-xs-12 text-center charla-texto-unico">
+                      ACTO CLAUSURA
+                    </div>
+                  </div>
+
+
+
                 </div>
               </div>
             </div>
@@ -807,7 +1053,8 @@
                       <tr>
                         <td class="fila-hora">10:30H</td>
                         <td class="fila-icono"></td>
-                        <td class="fila-texto">dise&ntilde;o e integraci&oacute;n de sistema de control en plantas de h2
+                        <td class="fila-texto">dise&ntilde;o e integraci&oacute;n de sistema de control en plantas de
+                          h2
                         </td>
                         <td class="fila-ubicacion">BASE SISTEMA</td>
                       </tr>
