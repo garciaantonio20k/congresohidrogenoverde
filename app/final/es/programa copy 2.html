@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+
+
+</head>
+
+<body>
+
+
+  <!-- este container susituye main_wrap -->
+  <div class="container" style="border:1px solid blue;">
+
+    <!-- copiar desde aqui -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+      .mb-1 {
+        margin-bottom: 1rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 2rem;
+      }
+
+      .contenedor-programa {
+        font-family: 'Lexend', Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: black;
+        background: #95C154;
+        padding: 1rem;
+      }
+
+      .contenedor-programa .tabla-programa {
+        width: 100%;
+      }
+
+      .contenedor-programa .tabla-programa tr {
+        border-bottom: 1px solid #ccc;
+      }
+
+      .contenedor-programa h2 {
+        color: white;
+        background-color: #62832f;
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .contenedor-programa .panel-heading {
+        background: #0040A7 !important;
+        color: white !important;
+        border-bottom: 2px solid black;
+      }
+
+      .contenedor-programa .panel-heading a {
+        text-decoration: none;
+      }
+
+      .fila-bloque {
+        background-color: #f0f0f0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .fila-hora {
+        text-align: left;
+        font-size: 10px;
+        vertical-align: top;
+        padding-right: 5px;
+        width: 40px;
+      }
+
+      .fila-icono {}
+
+      .fila-texto {
+        vertical-align: top;
+        text-transform: uppercase;
+      }
+
+      .fila-texto-azul {
+        vertical-align: top;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .fila-tipo {
+        vertical-align: top;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        font-size: 0.9rem;
+      }
+
+      .fila-texto {
+        vertical-align: top;
+      }
+
+      .fila-ubicacion {
+        vertical-align: top;
+        font-size: 0.8rem;
+        text-align: right;
+      }
+
+      .fila-ubicacion-larga {
+        vertical-align: top;
+        font-size: 0.8rem;
+        text-align: right;
+      }
+
+      .ponentes {
+        background-color: #95C152;
+        color: #ffffff;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+
+      .ponente {
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+
+      .ponente small {
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .ponente-imagen img {
+        border-radius: 1rem;
+        height: 100px;
+        object-fit: cover;
+        width: 100%;
+        object-position: top;
+        background: #f0f0f0;
+      }
+
+      .ponente p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .ponente .nombre {
+        margin: 0.5rem 0 0rem 0;
+        line-height: normal;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #f0f0f0;
+      }
+
+      .ponente .cargo {
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+        font-size: 0.7rem;
+        color: rgb(255, 255, 255, 0.5);
+        line-height: normal;
+      }
+
+      #piePagina {
+        margin-top: 1rem !important;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: #EDEDED;
+        padding: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .contenido {
+        background-color: white;
+        padding: 1rem;
+      }
+
+      .bloque {
+        text-transform: uppercase;
+      }
+
+      .bloque1 {
+        background-color: #ED9D6A;
+        color: black;
+      }
+
+      .bloque2 {
+        background-color: #B6A7F3;
+        color: black;
+      }
+
+      .bloque3 {
+        background-color: #F68EA1;
+        color: black;
+      }
+
+      .bloque4 {
+        background-color: #5AB0F1;
+        color: black;
+      }
+
+      .bloque5 {
+        background-color: #A3CF70;
+        color: black;
+      }
+
+      .charla {
+        border-bottom: 1px solid #ccc;
+        padding: 1rem 0;
+      }
+
+      .charla img {
+        vertical-align: middle;
+      }
+
+      .charla .hora {
+        font-size: 1rem;
+      }
+
+      .charla-texto-unico {
+        padding: 0.5rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .charla-titulo {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .charla-ponentes {
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .bloque {
+        padding: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .color-blanco {
+        color: white !important;
+      }
+
+      .bordes-redondos {
+        border-radius: 10px;
+      }
+
+      .contenedor-programa .contenedor-descarga {
+        margin-bottom: 1rem;
+        background-color: #62832f;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 0 0 1rem auto;
+      }
+
+      .contenedor-programa .enlace-descarga {
+        color: white;
+      }
+
+      .img-responsive {
+        height: 200px !important;
+        width: 200px !important;
+      }
+    </style>
+    <div class="contenedor-programa">
+      <div class="row">
+        <div class="col-xs-12 mb-1">
+          <h2>Programa Principal</h2>
+          <img
+            src="https://garciaantonio20k.github.io/congresohidrogenoverde/programas/programa_principal/PROGRAMA_PRINCIPAL_page-0002.jpg?"
+            alt="" width="100%">
+          <img
+            src="https://garciaantonio20k.github.io/congresohidrogenoverde/programas/programa_principal/PROGRAMA_PRINCIPAL_page-0003.jpg?"
+            alt="" width="100%">
+          <img
+            src="https://garciaantonio20k.github.io/congresohidrogenoverde/programas/programa_principal/PROGRAMA_PRINCIPAL_page-0004.jpg?"
+            alt="" width="100%">
+          <hr>
+          <a href="https://garciaantonio20k.github.io/congresohidrogenoverde/programas/PROGRAMA_PRINCIPAL.pdf">PROGRAMA
+            PDF</a>
+          <hr>
+          <a
+            href="https://www.tufabricadeventos.com/common/cfm/galerias.cfm?link=7C72032132D04D62A7715F8EE8E89140D84F931A2C0B56D5">PROGRAMA
+            interno PDF</a>
+          <hr>
+          <embed src="https://garciaantonio20k.github.io/congresohidrogenoverde/programas/PROGRAMA_PRINCIPAL.pdf"
+            width="100%" height="375" type="application/pdf">
+          <hr>
+          <embed
+            src="https://www.tufabricadeventos.com/common/cfm/galerias.cfm?link=7C72032132D04D62A7715F8EE8E89140D84F931A2C0B56D5"
+            width="500" height="375" type="application/pdf">
+          <hr>
+          <embed type="application/pdf"
+            src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/drive/folders/1ztQctQzFtzc8T00J_y09_N7lOvc_FrM0"
+            width="500" height="375">
+
+          <!-- fin text-center -->
+        </div>
+        <!-- fin col-xs-12 -->
+        <div class="col-xs-12 mb-1">
+          <h2>
+            Programa Paralelo</h2>
+          <div class="text-center">
+            <a class="btn btn-primary"
+              href="https://www.tufabricadeventos.com/common/cfm/galerias.cfm?link=7C72032132D04D62B038F5351A66696ED84F931A2C0B56D5"
+              style="color:white" target="_blank">Descargar en PDF <img height="32"
+                src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/file-pdf.svg" /> </a>
+          </div>
+        </div>
+        <!-- fin col-xs-12 -->
+      </div>
+      <!-- fin row -->
+      <h2>
+        Ponentes Principales</h2>
+      <div id="ponentes-principales">
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/teresa-rasero-guerrero-/" target="_blank"><img
+                  alt="Teresa Rasero Guerrero" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/01_teresa_rasero_guerrero.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Teresa Rasero Guerrero<br />
+                <small>Presidenta Comit&eacute; Honor</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://produccioncientifica.uhu.es/investigadores/211281/detalle" target="_blank"><img
+                  alt="Paqui Segura Manzano" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/02_paqui_segura.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Paqui Segura Manzano<br />
+                <small>Presidenta C&aacute;tedra H2 Gabitel/UHU</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/rafael-luque-berruezo-36b74952/" target="_blank"><img
+                  alt="Rafael Luque Berruezo" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/rafael_luque.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Rafael Luque Berruezo<br />
+                <small>CEO ARIEMA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/santiago-g%C3%B3mez-ramos-832b3626/" target="_blank"><img
+                  alt="Santiago Gómez Ramos" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/santiago-gomez-ramos-appa.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Santiago G&oacute;mez Ramos<br />
+                <small>Presidente de APPA Renovables</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/manucermeron/" target="_blank"><img alt="Manu Cermerón Romero"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/05_manuel_cermeron.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Manuel Cermer&oacute;n Romero<br />
+                <small>CEO Veolia Espa&ntilde;a</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.telampartners.com/luis-crespo" target="_blank"><img alt="Luis Crespo Rodríguez"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/06_luis_crespo_rodriguez.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Luis Crespo Rodr&iacute;guez<br />
+                <small> CEO Energ&iacute;a en Telam</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/rodrigovelaromera/" target="_blank"><img alt="Rodrigo Vela Romera"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/rodrigo_vela.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Rodrigo Vela Romera<br />
+                <small>Sales director South Europe, Gundfos</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/amosfuentesmellinas-945348237/" target="_blank"><img
+                  alt="Amós Fuentes Mellinas" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/amos_fuentes_mellinas.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Am&oacute;s Fuentes Mellinas<br />
+                <small>Director de H2 de NAVANTIA SEANERGIES</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jos%C3%A9-manuel-and%C3%BAjar-m%C3%A1rquez-9118bb11a/"
+                target="_blank"><img alt="José Manuel Andújar Márquez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/josemanuel-andujar.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Manuel And&uacute;jar M&aacute;rquez<br />
+                <small>Director ITES</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://op.europa.eu/es/web/who-is-who/person/-/person/COM_00003AAC3A0A" target="_blank"><img
+                  alt="Cristina Lobillo Borrero" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/08_cristina_lobillo_borrero.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Cristina Lobillo Borrero<br />
+                <small>Directora de la Plataforma de Energ&iacute;a de la UE y Relaciones Internacionales</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javierbrey/" target="_blank"><img alt="José Javier Brey Sánchez"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/09_javier_brey-min.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Javier Brey S&aacute;nchez<br />
+                <small>Presidente Asociaci&oacute;n Nacional H2</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/antonio-jos%C3%A9-palacio-lanne-lenne-04567380" target="_blank"><img
+                  alt="Antonio J. Palacio Lanne-Lenne" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/11_antonio_jose_palacio_lanne_lenne.jpeg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Antonio J. Palacio Lanne-Lenne<br />
+                <small>Jefe de Servicio de Energ&iacute;a Consejeria Industria, Energ&iacute;a y Minas</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/carlos-m%C3%ADnguez-a8456567/" target="_blank"><img
+                  alt="Carlos Mínguez Plasencia" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/12_Carlos_Mínguez_Andersen.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Carlos M&iacute;nguez Plasencia<br />
+                <small>Socio y responsable de Energ&iacute;a Andersen</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/maria-cabrelles-a3b5b817/" target="_blank"><img
+                  alt="María Cabrelles Fernández" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/maria-cabrelles-fernandez-dekra.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Mar&iacute;a Cabrelles Fern&aacute;ndez<br />
+                <small>Directora Procesos Seguridad DEKRA</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/carlos-barrasa/" target="_blank"><img alt="Carlos Barrasa Ruiz"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/carlos-barrasa.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Carlos Barrasa Ruiz<br />
+                <small>Director de Commercial &amp; Clean Energies Cepsa</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javier-go%C3%B1i-ab34907/" target="_blank"><img
+                  alt="Javier Goñi del Cacho" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/13_Javier_Goñi_Fertiberia.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier Go&ntilde;i del Cacho<br />
+                <small>CEO Fertiberia</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/eugeniotrilloleon/" target="_blank"><img alt="Eugenio Trillo León"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/14_eugenio_trillo_leon.png" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Eugenio Trillo Le&oacute;n<br />
+                <small>Vicepresidente Cl&uacute;ster Andaluz H2</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javier-targhetta-88a9b2b7/" target="_blank"><img
+                  alt="Javier Targhetta Roza" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/javier_targhetta.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier Targhetta Roza<br />
+                <small>Presidente en Atlantic Copper</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/manuel-breva-0601b986/" target="_blank"><img
+                  alt="Manuel Breva Calatayud" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/manuel_breva.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Manuel Breva Calatayud<br />
+                <small>Secretario General ANFFECC</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/ibanmolina/" target="_blank"><img alt="Iban Molina Saera"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/iban_molina_saera.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Ib&aacute;n Molina Saera<br />
+                <small>Director H2V en Iberdrola Espa&ntilde;a</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/arturo-gonzalo-aizpiri/" target="_blank"><img
+                  alt="Arturo Gonzalo Aizpiri" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/arturo_gonzalo_aizpiri.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Arturo Gonzalo Aizpiri<br />
+                <small>Consejero Delegado de Enag&aacute;s</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jesus-manuel-gil-jimenez-3a4ab68/" target="_blank"><img
+                  alt="Jesús Manuel Gil Jimenez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/26_jesus_gil_jimenez.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jes&uacute;s Manuel Gil Jim&eacute;nez<br />
+                <small>Director de H2, Enag&aacute;s</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/joanbatalla/" target="_blank"><img alt="Joan Batalla Bejerano"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/23-joan-batalla-app.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Joan Batalla Bejerano<br />
+                <small>Presidente Sedigas</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jorge-lanza-perea-09806825/" target="_blank"><img
+                  alt="Jorge Lanza Perea" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/20_jorge_lanza_perea.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jorge Lanza Perea<br />
+                <small>Consejero Delegado EXOLUM</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row-->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/francisco-suils-fuentes-937bb640/?originalSubdomain=es"
+                target="_blank"><img alt="Francesc Suils Fuentes" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/francesc_suils_fuentes.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Francesc Suils Fuentes<br />
+                <small>Director General MASA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/francisco-montalban-gomez-65032125/" target="_blank"><img
+                  alt="Francisco Montalbán Gómez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/19-francisco-montalban.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Francisco Montalb&aacute;n G&oacute;mez<br />
+                <small>Presidente Cl&uacute;ster Andaluz H2</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/andr%C3%A9s-hernando-saiz-6a815b79/" target="_blank"><img
+                  alt="Andrés Hernando Saiz" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/22_andres_hernando_saiz.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Andr&eacute;s Hernando Saiz<br />
+                <small>Director General en Hiperbaric</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jose-luis-fernandez-bris-a4a91a22/" target="_blank"><img
+                  alt="José Luis Fernandez Bris" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/23_Jose_Luis_Fernandez_Bris.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Luis Fern&aacute;ndez Bris<br />
+                <small>CEO Calvera</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jos%C3%A9-manuel-gregorio-s%C3%A1nchez-79171a62/"
+                target="_blank"><img alt="José Manuel Gregorio" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/23_Jose_Manuel_Gregorio_AJUSA.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Manuel Gregorio S&aacute;nchez<br />
+                <small>Director de Tecnolog&iacute;as del H2, AJUSA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/deborahgarciabello/" target="_blank"><img alt="Deborah Garcia Bello"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/deborah-garcia-bello.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Deborah Garc&iacute;a Bello<br />
+                <small>Comunicadora</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/maria-mas-chacon-8645ba31/" target="_blank"><img
+                  alt="Maria Mas Chacon" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/maria-mas-chacon-aeqt.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Mar&iacute;a Mas Chac&oacute;n<br />
+                <small>Directora Gerente AEQT</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/isaac-justicia-79105717/" target="_blank"><img
+                  alt="Isaac Justicia Antó" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/20-isaac-justicia.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Isaac Justicia Ant&oacute;<br />
+                <small>Director oficina t&eacute;cnica Valle H2 Catalu&ntilde;a</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jose-ignacio-zudaire-60271227/" target="_blank"><img
+                  alt="José Ignacio Zudaire Arana" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/17-jose-ignacio-zudaire.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Ignacio Zudaire Arana<br />
+                <small>Presidente del Corredor Vasco del H2 (BH2C)</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/antonioperezcollar/" target="_blank"><img alt="Antonio Perez Collar"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/28_antonio_perez_collar.png" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Antonio P&eacute;rez Collar<br />
+                <small>Presidente VAHIA 2030, Valle del H2 de Alicante</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/joaqu%C3%ADn-rodr%C3%ADguez-jadraque-850aa0/" target="_blank"><img
+                  alt="Joaquín Rodríguez Jadraque" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/joaquin_rodriguez_jadraque.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Joaqu&iacute;n Rodr&iacute;guez Jadraque<br />
+                <small>Director De H2 &amp; Clean Power Cepsa</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/urbano-troncoso-p%C3%A9rez-9a9443a3/" target="_blank"><img
+                  alt="Urbano Troncoso Perez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/urbano-troncoso-perez.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Urbano Troncoso P&eacute;rez<br />
+                <small>Responsable Financiaci&oacute;n Santander</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="	https://www.linkedin.com/in/monica-swanson-777320/" target="_blank"><img alt="Monica Swanson"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/monica_swanson.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Monica Swanson<br />
+                <small>Directora Corredores H2 Puerto Rotterdam</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/maarten-wetselaar-cepsa/" target="_blank"><img
+                  alt="Maarten Wetselaar" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/maarten-wetselaar.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Maarten Wetselaar<br />
+                <small>CEO Cepsa</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/ana-quelhas-43a59ab/?originalSubdomain=pt" target="_blank"><img
+                  alt="Ana Quehlas" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/ana_quelhas.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Ana Quehlas<br />
+                <small>Responsable H2 EDP Renovables</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/diego-perdones-62644188/" target="_blank"><img
+                  alt="Diego Perdones Montero" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/diego-perdones-c2x.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Diego Perdones Montero<br />
+                <small>Consejero Delegado de C2X Espa&ntilde;a</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/fernando-marcos-duque-6258211a6/" target="_blank"><img
+                  alt="Fernando Marcos Duque" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/fernando-marcos-duque.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Fernando Marcos Duque<br />
+                <small>Director Comercial MAN Energy Solutions Espa&ntilde;a y Portugal</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/sagrari-miguel-montalv%C3%A1/" target="_blank"><img
+                  alt="Sagrari Miguel Montalva" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/Sagrari-Miguel-Montalva.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Sagrari Miguel Montalva<br />
+                <small>Directora de Asuntos Reglamentarios de Hidr&oacute;geno y CAC BP </small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jos%C3%A9-mar%C3%ADa-rodriguez-florez-353567135/?originalSubdomain=es"
+                target="_blank"><img alt="José Maria Rodriguez Florez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/jose_maria_rodriguez_flores_damas.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jos&eacute; Mar&iacute;a Rodr&iacute;guez Fl&oacute;rez<br />
+                <small>Director de Damas</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javiercerveraalonso/" target="_blank"><img
+                  alt="Javier Cervera Alonso" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/javier-cervera-alonso-balearia.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier Cervera Alonso<br />
+                <small>Director de Transici&oacute;n Energ&eacute;tica Balearia</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javier-g%C3%A1ndara-mart%C3%ADnez-5768b52/" target="_blank"><img
+                  alt="Javier Gándara Martínez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/javier-gandara-martinez-ala.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier G&aacute;ndara Mart&iacute;nez<br />
+                <small>Presidente de ALA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/macarena-gutierrez-73070612/" target="_blank"><img
+                  alt="Macarena Gutierrez Martinez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/macarena_gutierrez.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Macarena Guti&eacute;rrez Mart&iacute;nez<br />
+                <small>Directora General Atlantic Copper</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/ignacio-alvarez-ossorio-ramos-60077027/" target="_blank"><img
+                  alt="Ignacio Alvarez-Ossorio Ramos" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/ignacio_alvarez-ossorio-ramos.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Ignacio &Aacute;lvarez-Ossorio Ramos<br />
+                <small>Director General APH</small>
+              </p>
+            </div>
+          </div>
+          <!-- espacio para otro ponente -->
+        </div>
+        <!-- fin row -->
+      </div>
+      <!-- fin ponentes principales -->
+      <h2>
+        Ponentes Paralelo</h2>
+      <div class="ponentes-paralelo">
+        <!-- miercoles -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/dositeo-nogueiro-m%C3%A9ndez-077b58b3/" target="_blank"><img
+                  alt="Dositeo Nogueiro Méndez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/dositeo_nogueiro.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Dositeo Nogueiro M&eacute;ndez<br />
+                <small>Product Manager V&aacute;lvulas &amp; Muestreo Iberfluid</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/victor-hugo-corcho-fernandez-20133528/" target="_blank"><img
+                  alt="Victor Hugo Corcho Fernández" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/05_Victor_Hugo_Corcho_Fernandez_CLANTECH.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Victor Hugo Corcho Fern&aacute;ndez<br />
+                <small>Engineering and Projects Manager at CLANTECH</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/carlos-del-prestamo-56943116" target="_blank"><img
+                  alt="Carlos del Prestamo" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/carlos-del-prestamo.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Carlos del Prestamo<br />
+                <small>Country Manager Espa&ntilde;a y Portugal Elyse</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/miquel-anglada-autet-aa210210a" target="_blank"><img
+                  alt="Miquel Anglada Autet" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/04_Miguel_Anglada_Autet_XARXA H2CAT.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Miquel Anglada Autet<br />
+                <small>Promotor tecnol&oacute;gico XARXA H2CAT</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row --><!-- jueves -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="	https://www.linkedin.com/in/pedro-huesa-cobo-a57599b3/" target="_blank"><img
+                  alt="Pedro Huesa Cobo" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/07_Pedro_Huesa_Cobo_HUESA.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Pedro Huesa Cobo<br />
+                <small>Director de Desarrollo de Negocio de Huesa</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/juan-andres-reales-bravo-37219127/" target="_blank"><img
+                  alt="Juan Reales Bravo" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/08_Juan_Reales_Bravo_GABITEL.png" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Juan Andr&eacute;s Reales Bravo<br />
+                <small>Director General Gabitel</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/montserratgrima847254/" target="_blank"><img
+                  alt="Montserrat Grima Moscardó" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/montserrat_grima.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Montserrat Grima Moscard&oacute;<br />
+                <small>Directora General Yokogawa Iberia</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/joaquinpla/" target="_blank"><img alt="Joaquín Pla Pagan"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/joaquin_pla.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Joaqu&iacute;n Pla Pagan<br />
+                <small>Director Comercial Yokogawa Iberia</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javierbuilcampos/" target="_blank"><img alt="Javier Buil Campos"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/javier_buil_campos.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier Buil Campos<br />
+                <small>Director t&eacute;cnico BASE SISTEMAS Y SUMINISTROS SA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/marcos-l%C3%B3pez-brea-baquero-5264789/" target="_blank"><img
+                  alt="Marcos López-Brea Baquero" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/marcos-lopez-brea.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Marcos L&oacute;pez-Brea Baquero<br />
+                <small>Director General en DH2 Energy</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://es.linkedin.com/in/dr-fernando-isorna-llerena-87110128" target="_blank"><img
+                  alt="Fernando Isorna Llerena" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/fernando-isorna-llerena.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Fernando Isorna Llerena<br />
+                <small>Jefe del &Aacute;rea de Energ&iacute;a y Medioambiente INTA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/enrique-gir%C3%B3n-05603312/" target="_blank"><img
+                  alt="Enrique Girón Monzón" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/enrique_giron.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Enrique Gir&oacute;n Monz&oacute;n<br />
+                <small>Director general ARIEMA Energ&iacute;a y Medioambiente SL</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/areyesca/" target="_blank"><img alt="Alvaro Reyes Carmona"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/alvaro_reyes_carmona.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Alvaro Reyes Carmona<br />
+                <small>Director general de Hidr&oacute;geno ARCAMO GROUP</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/jordidiaznivera/" target="_blank"><img alt="Jordi Díaz Nivera"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/Jordi_Diaz_Nivera_SWAGELOK.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Jordi D&iacute;az Nivera<br />
+                <small>Ingeniero de Energ&iacute;a Limpia en SWAGELOK</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/javier-alvarez-rdgz/" target="_blank"><img
+                  alt="Javier Álvarez Rodríguez" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/18_Javier_Alvarez_Rodriguez_GRUNDFOS.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Javier &Aacute;lvarez Rodr&iacute;guez<br />
+                <small>Senior Sales Developer Europe Water treatment &amp; dosing Grundfos</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/eduardo-pin%C3%A9-c%C3%A1ceres-33730a41/" target="_blank"><img
+                  alt="Eduardo Pine" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/20_Eduardo_Pine_ACOM.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Eduardo Pin&eacute; C&aacute;ceres<br />
+                <small>Director T&eacute;cnico ACOM</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/marianasigoli/" target="_blank"><img alt="Mariana Sigoli Vaz"
+                  class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/mariana_sigoli_vaz.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Mariana Sigoli Vaz<br />
+                <small>Responsable Corporativa del Mercado H2V en Siemens Smart Infraestructure EA</small>
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 text-center">
+            <div class="col-xs-12 ponente-imagen">
+              <a href="https://www.linkedin.com/in/alejandro-blanco-8ab674a5" target="_blank"><img
+                  alt="Alejandro Blanco Mahamud" class="img-responsive"
+                  src="https://garciaantonio20k.github.io/congresohidrogenoverde/images/ponentes/alejandro_blanco.jpg" />
+              </a>
+            </div>
+            <div class="col-xs-12 ponente">
+              <p>
+                Alejandro Blanco Mahamud<br />
+                <small>Director Comercial en Hiperbaric</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- fin row -->
+        <div class="row">
+          &nbsp;</div>
+      </div>
+      <!-- fin ponentes-paralelo -->
+    </div>
+    <!-- fin contenedor-programa -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+      integrity="sha512-ju6u+4bPX50JQmgU97YOGAXmRMrD9as4LE05PdC3qycsGQmjGlfm041azyB1VfCXpkpt1i9gqXCT6XuxhBJtKg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"
+      integrity="sha512-nzOvIru0RxvwssbMUZOcSKQnQHMRNgUGIC/tuj7rCllNFbXgBPtKhmCGjmk4TlyPfU9fjyIeNGJs5pGMXmXrvw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"
+      integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- copiar hasta aqui -->
+  </div> <!-- fin container main-wrap -->
+</body>
+
+</html>
